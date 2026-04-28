@@ -1,14 +1,38 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import ManulBlock from './ManulBlock';
 
 export default function Hero({ data }) {
+  const manulOuterRef = useRef(null);
+  const manulInnerRef = useRef(null);
+
+  useEffect(() => {
+    if (!manulOuterRef.current || !manulInnerRef.current) return;
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ delay: 0.65 });
+      tl.set(manulOuterRef.current, { zIndex: 0 });
+      tl.set(manulInnerRef.current, { yPercent: 55, scale: 0.96 });
+      tl.to(manulInnerRef.current, { yPercent: 18, scale: 0.985, duration: 0.55, ease: 'power3.out' });
+      tl.set(manulOuterRef.current, { zIndex: 20 });
+      tl.to(manulInnerRef.current, { yPercent: 0, scale: 1, duration: 0.12, ease: 'power2.out' });
+    }, manulOuterRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section className="w-full px-4 pt-20 pb-6">
       <div className="mx-auto max-w-6xl relative overflow-visible">
-        <div className="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-[71%] pointer-events-none">
-          <ManulBlock />
+        <div ref={manulOuterRef} className="absolute left-1/2 top-0 z-0 -translate-x-1/2 -translate-y-[71%] pointer-events-none">
+          <div ref={manulInnerRef} className="will-change-transform">
+            <ManulBlock />
+          </div>
         </div>
 
-        <div className="bg-slate-50 p-6 sm:p-10 text-center shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
+        <div className="relative z-10 bg-slate-50 p-6 sm:p-10 text-center shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
           <div className="relative mx-auto max-w-3xl">
             <h1 className="mb-3 text-[28px] font-bold leading-[1.2]">
               Канцтовары,

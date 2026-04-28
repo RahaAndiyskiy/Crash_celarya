@@ -1,3 +1,7 @@
+'use client';
+
+'use client';
+
 export default function ManulBlock() {
   return (
     <div className="w-full max-w-[500px] rounded-[2rem] bg-transparent p-1 flex items-end justify-center overflow-visible">
