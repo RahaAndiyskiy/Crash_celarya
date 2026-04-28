@@ -8,8 +8,8 @@ export default function Hero({ data }) {
           <ManulBlock />
         </div>
 
-        <div className="rounded-[2rem] border border-slate-200/70 bg-white/95 p-6 shadow-[0_36px_88px_rgba(15,23,42,0.12)] sm:p-10">
-          <div className="relative">
+        <div className="bg-slate-50 p-6 sm:p-10 text-center shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
+          <div className="relative mx-auto max-w-3xl">
             <h1 className="mb-3 text-[28px] font-bold leading-[1.2]">
               Канцтовары,
               <br />

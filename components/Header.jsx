@@ -9,7 +9,10 @@ export default function Header() {
     <>
       <header className="sticky top-0 z-40 mb-3 flex items-center justify-between rounded-3xl border border-white/20 bg-white/45 p-2 shadow-soft backdrop-blur-xl backdrop-saturate-150">
         <div className="flex items-center gap-3">
-          <img src="/logo.png" alt="Крашцелярия" className="h-16 w-auto max-w-[110px] rounded-2xl object-contain sm:h-20 sm:max-w-[130px]" />
+          <picture>
+            <source srcSet="/logo.webp" type="image/webp" />
+            <img src="/logo.png" alt="Крашцелярия" className="h-16 w-auto max-w-[110px] rounded-2xl object-contain sm:h-20 sm:max-w-[130px]" />
+          </picture>
         </div>
 
         <nav className="hidden gap-6 md:flex text-sm text-slate-600">
