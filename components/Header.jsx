@@ -10,7 +10,7 @@ export default function Header() {
       <header className="sticky top-0 z-40 mb-3 flex items-center justify-between rounded-3xl border border-white/20 bg-white/45 p-2 shadow-soft backdrop-blur-xl backdrop-saturate-150">
         <div className="flex items-center gap-3">
           <picture>
-            <source srcSet="/logo.webp" type="image/webp" />
+            <source srcSet="/logo-110.webp 110w, /logo-130.webp 130w" type="image/webp" sizes="(max-width: 640px) 110px, 130px" />
             <img src="/logo.png" alt="Крашцелярия" className="h-16 w-auto max-w-[110px] rounded-2xl object-contain sm:h-20 sm:max-w-[130px]" />
           </picture>
         </div>
