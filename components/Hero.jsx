@@ -12,12 +12,18 @@ export default function Hero({ data }) {
     if (!manulOuterRef.current || !manulInnerRef.current) return;
 
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.65 });
+      const tl = gsap.timeline({ delay: 0.9 });
       tl.set(manulOuterRef.current, { zIndex: 0 });
-      tl.set(manulInnerRef.current, { yPercent: 55, scale: 0.96 });
-      tl.to(manulInnerRef.current, { yPercent: 18, scale: 0.985, duration: 0.55, ease: 'power3.out' });
-      tl.set(manulOuterRef.current, { zIndex: 20 });
-      tl.to(manulInnerRef.current, { yPercent: 0, scale: 1, duration: 0.12, ease: 'power2.out' });
+      tl.set(manulInnerRef.current, { yPercent: 35, scale: 0.96, opacity: 0 });
+      tl.to(manulInnerRef.current, {
+        yPercent: 15,
+        scale: 0.985,
+        opacity: 1,
+        duration: 1.2,
+        ease: 'power3.out',
+      });
+      tl.to(manulInnerRef.current, { yPercent: -36, scale: 1, duration: 0.15, ease: 'power2.out' });
+      tl.to(manulOuterRef.current, { zIndex: 20, duration: 0 }, '-=0.012');
     }, manulOuterRef);
 
     return () => ctx.revert();
@@ -27,7 +33,11 @@ export default function Hero({ data }) {
     <section className="w-full px-4 pt-20 pb-6">
       <div className="mx-auto max-w-6xl relative overflow-visible">
         <div ref={manulOuterRef} className="absolute left-1/2 top-0 z-0 -translate-x-1/2 -translate-y-[71%] pointer-events-none">
-          <div ref={manulInnerRef} className="will-change-transform">
+          <div
+            ref={manulInnerRef}
+            className="will-change-transform"
+            style={{ transform: 'translateY(35%) scale(0.96)', opacity: 0 }}
+          >
             <ManulBlock />
           </div>
         </div>
