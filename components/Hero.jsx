@@ -57,11 +57,11 @@ export default function Hero({ data }) {
                 aria-hidden="true"
               />
             </div>
-            <div className="absolute -left-8 top-[-40%] z-0 pointer-events-none sm:-left-14 sm:top-[-36%]">
+            <div className="absolute -left-8 top-[-36%] z-0 pointer-events-none sm:-left-14 sm:top-[-32%]">
               <img
                 src="/hero-sticker.webp"
                 alt=""
-                className="h-[180px] w-auto rotate-0 object-contain opacity-95 sm:h-[260px]"
+                className="h-[162px] w-auto rotate-0 object-contain opacity-95 sm:h-[234px]"
                 aria-hidden="true"
               />
             </div>
@@ -81,7 +81,7 @@ export default function Hero({ data }) {
               Канцтовары,
               <br />
               в которые ты{' '}
-              <span className="relative inline-block whitespace-nowrap text-purple-600 text-[2.75rem] sm:text-[4.5rem] leading-none">
+              <span className="relative inline-block whitespace-nowrap text-[2.75rem] sm:text-[4.5rem] leading-none bg-gradient-to-r from-violet-500 via-fuchsia-500 to-yellow-400 bg-clip-text text-transparent">
                 влюбишься
                 <img
                   src="/Сердце лайм.webp"
