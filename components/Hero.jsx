@@ -75,30 +75,30 @@ export default function Hero({ data }) {
           </div>
         </div>
 
-        <div className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 z-10 p-6 sm:p-10 text-center overflow-hidden shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)] bg-white">
-          <div className="relative mx-auto max-w-5xl">
-            <h1 className="mb-3 text-[48px] sm:text-[64px] font-black leading-[1.05] font-nunito">
+        <div className="relative z-10 mx-auto w-full px-4 py-8 sm:px-6 sm:py-10 text-center overflow-hidden rounded-[32px] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)] bg-white">
+          <div className="relative mx-auto w-full max-w-3xl">
+            <h1 className="mb-3 text-4xl sm:text-5xl md:text-[3.75rem] font-black leading-[1.02] sm:leading-[1.04] font-nunito">
               Канцтовары,
               <br />
               в которые ты{' '}
-              <span className="relative inline-block text-purple-600 text-[56px] sm:text-[72px]">
+              <span className="relative inline-block whitespace-nowrap text-purple-600 text-[2.75rem] sm:text-[4.5rem] leading-none">
                 влюбишься
                 <img
                   src="/Сердце лайм.webp"
                   alt=""
                   aria-hidden="true"
-                  className="absolute left-[95%] top-[0%] mt-2 -translate-x-0 h-16 w-auto sm:h-20"
+                  className="absolute left-3/4 top-1/2 z-0 h-[3.75rem] w-auto -translate-x-1/2 -translate-y-1/2 sm:h-[6rem]"
                   style={{ transform: 'rotate(45deg)' }}
                 />
               </span>
             </h1>
 
-            <p className="mb-5 text-base text-secondary leading-relaxed">
+            <p className="mb-5 text-sm sm:text-base text-secondary leading-relaxed ">
               Трендовая канцелярия, мерч блогеров и игрушки, которые хочется взять прямо сейчас!
             </p>
 
             <div className="relative mb-5 w-full">
-              <div className="absolute -left-6 top-[-12%] z-0 -translate-y-1/2 sm:-left-12 sm:top-[-8%] block">
+              <div className="absolute left-0 bottom-10 z-0 pointer-events-none sm:-left-12 sm:bottom-16" style={{ opacity: 0.6 }}>
                 <img
                   src="/клякса фиол.webp"
                   alt=""
