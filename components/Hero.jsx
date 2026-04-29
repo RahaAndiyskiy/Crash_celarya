@@ -81,7 +81,7 @@ export default function Hero({ data }) {
               Канцтовары,
               <br />
               в которые ты{' '}
-              <span className="relative inline-block whitespace-nowrap text-[2.75rem] sm:text-[4.5rem] leading-none bg-gradient-to-r from-violet-500 via-fuchsia-500 to-yellow-400 bg-clip-text text-transparent">
+              <span className="relative inline-block whitespace-nowrap text-[3.5rem] sm:text-[4.5rem] leading-none bg-gradient-to-r from-violet-500 via-fuchsia-500 to-yellow-400 bg-clip-text text-transparent">
                 влюбишься
                 <img
                   src="/Сердце лайм.webp"

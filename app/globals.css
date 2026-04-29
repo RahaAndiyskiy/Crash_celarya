@@ -54,9 +54,9 @@ button {
 .catalog-button {
   position: relative;
   overflow: visible;
-  border: 2px solid rgba(170, 214, 22, 0.95);
-  background-color: rgba(255, 255, 255, 0.94);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 0 3px rgba(170, 214, 22, 0.28);
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box, linear-gradient(to right, #7c3aed, #d946ef, #facc15) border-box;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 0 3px rgba(201, 98, 255, 0.22);
   transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.18s ease;
 }
 
@@ -66,9 +66,9 @@ button {
   inset: -18px;
   z-index: -2;
   border-radius: inherit;
-  border: 4px solid rgba(170, 214, 22, 0.75);
-  background: radial-gradient(circle at top left, rgba(170, 214, 22, 0.55), transparent 16%),
-              radial-gradient(circle at bottom right, rgba(170, 214, 22, 0.35), transparent 14%);
+  border: 4px solid rgba(201, 98, 255, 0.4);
+  background: radial-gradient(circle at top left, rgba(124, 58, 237, 0.45), transparent 16%),
+              radial-gradient(circle at bottom right, rgba(250, 204, 21, 0.35), transparent 14%);
   filter: blur(18px);
   opacity: 1;
 }
@@ -79,13 +79,13 @@ button {
   inset: -6px;
   z-index: -1;
   border-radius: inherit;
-  border: 1px solid rgba(170, 214, 22, 0.6);
+  border: 1px solid rgba(201, 98, 255, 0.3);
   background: rgba(255, 255, 255, 0.12);
 }
 
 .catalog-button:hover {
-  border-color: rgba(170, 214, 22, 1);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 30px rgba(170, 214, 22, 0.55), 0 0 50px rgba(170, 214, 22, 0.28);
+  border-color: transparent;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22), 0 0 30px rgba(201, 98, 255, 0.35), 0 0 50px rgba(234, 88, 225, 0.3);
 }
 
 .catalog-button:active {
