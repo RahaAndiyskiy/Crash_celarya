@@ -15,16 +15,16 @@ export default function Hero({ data }) {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.9 });
       tl.set(manulOuterRef.current, { zIndex: 0 });
-      tl.set(manulInnerRef.current, { yPercent: 35, scale: 0.96, opacity: 0 });
+      tl.set(manulInnerRef.current, { yPercent: 0, scale: 0.96, opacity: 0 });
       tl.set(cloudImageRef.current, { autoAlpha: 0, scale: 0.8 });
       tl.to(manulInnerRef.current, {
-        yPercent: 15,
+        yPercent: 5,
         scale: 0.985,
         opacity: 1,
         duration: 1.8,
         ease: 'power3.out',
       });
-      tl.to(manulInnerRef.current, { yPercent: -37, scale: 1, duration: 0.2, ease: 'power2.out' });
+      tl.to(manulInnerRef.current, { yPercent: -37, scale: 1, duration: 0.2, ease: 'power3.out' });
       tl.to(manulOuterRef.current, { zIndex: 20, duration: 0 }, '-=0.012');
       tl.to(cloudImageRef.current, {
         autoAlpha: 1,
@@ -43,8 +43,8 @@ export default function Hero({ data }) {
   }, []);
 
   return (
-    <section className="relative w-full pt-48 sm:pt-56 bg-[#F5F3FF] overflow-x-hidden overflow-y-visible">
-      <div className="mx-auto max-w-7xl relative overflow-visible px-4 sm:px-6">
+    <section className="relative w-full pt-56 sm:pt-64 bg-[#F5F3FF] overflow-x-hidden overflow-y-visible">
+      <div className="mx-auto max-w-7xl relative overflow-visible">
         <div ref={manulOuterRef} className="absolute left-1/2 top-0 z-0 -translate-x-1/2 -translate-y-[71%] pointer-events-none">
           <div className="relative">
             <div className="absolute -right-2 -top-14 z-0 pointer-events-none sm:-right-10 sm:-top-10">
@@ -75,7 +75,7 @@ export default function Hero({ data }) {
           </div>
         </div>
 
-        <div className="relative z-10 mx-auto w-full px-4 py-8 sm:px-6 sm:py-10 text-center overflow-hidden rounded-[32px] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)] bg-white">
+        <div className="relative z-10 mx-auto w-full px-4 py-8 sm:px-6 sm:py-10 text-center overflow-hidden rounded-t-[32px] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)] bg-white">
           <div className="relative mx-auto w-full max-w-3xl">
             <h1 className="mb-3 text-4xl sm:text-5xl md:text-[3.75rem] font-black leading-[1.02] sm:leading-[1.04] font-nunito">
               Канцтовары,
@@ -98,7 +98,7 @@ export default function Hero({ data }) {
             </p>
 
             <div className="relative mb-5 w-full">
-              <div className="absolute left-0 bottom-10 z-0 pointer-events-none sm:-left-12 sm:bottom-16" style={{ opacity: 0.6 }}>
+              <div className="absolute left-0 bottom-10 z-0 pointer-events-none sm:-left-12 sm:bottom-16" style={{ opacity: 0.4 }}>
                 <img
                   src="/клякса фиол.webp"
                   alt=""
