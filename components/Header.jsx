@@ -9,7 +9,7 @@ export default function Header() {
     <>
       <header className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-3xl items-center justify-between rounded-none bg-[rgba(245,243,255,0.78)] px-4 py-3 backdrop-blur-xl backdrop-saturate-150 border-b border-white/20">
         <div className="flex items-center gap-2">
-          <img src="/Лого_1.png" alt="Крашцелярия" className="h-18 w-auto max-w-[140px] object-contain sm:h-22 sm:max-w-[160px]" />
+          <img src="/LOGO.webp" alt="Крашцелярия" className="h-18 w-auto max-w-[140px] object-contain sm:h-22 sm:max-w-[160px]" />
         </div>
 
         <nav className="hidden gap-4 md:flex text-sm text-secondary">
@@ -22,7 +22,7 @@ export default function Header() {
           <button
             type="button"
             aria-label="Поиск"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white text-secondary transition hover:bg-slate-100"
+            className="hero-icon-button hero-icon-button--lime inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white text-secondary transition hover:bg-slate-100"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="7" />
@@ -33,7 +33,7 @@ export default function Header() {
             type="button"
             aria-label="Открыть меню"
             onClick={() => setMenuOpen(true)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#A78BFA] text-white transition-colors hover:bg-[#9774f0] shadow-none md:hidden"
+            className="hero-icon-button hero-icon-button--purple inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#A78BFA] text-white transition-colors hover:bg-[#9774f0] md:hidden"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="3" y1="6" x2="21" y2="6" />
