@@ -10,10 +10,14 @@ import { heroText, features, products, categories, contacts } from '../content';
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6 pt-24">
         <Header />
+      </div>
+
+      <Hero data={heroText} />
+
+      <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
         <main className="space-y-20 pt-0">
-          <Hero data={heroText} />
           <Features items={features} />
           <Products items={products} />
           <Categories items={categories} />
