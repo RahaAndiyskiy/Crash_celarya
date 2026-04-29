@@ -44,35 +44,34 @@ export default function Hero({ data }) {
 
   return (
     <section className="relative w-full pt-48 sm:pt-56 bg-[#F5F3FF] overflow-x-hidden overflow-y-visible">
-      <div className="absolute right-12 -top-10 z-0 pointer-events-none sm:right-4 sm:-top-10 opacity-90">
-        <img
-          ref={cloudImageRef}
-          src="/Облачко новое.webp"
-          alt=""
-          className="h-[270px] w-auto opacity-90 sm:h-[320px]"
-          style={{ transform: 'rotate(25deg)' }}
-          aria-hidden="true"
-        />
-      </div>
       <div className="mx-auto max-w-7xl relative overflow-visible px-4 sm:px-6">
-        <div className="absolute left-6 -top-52 z-0 pointer-events-none sm:left-12 sm:-top-72">
-          <img
-            src="/клякса лайм.webp"
-            alt=""
-            className="h-[274px] w-auto rotate-0 object-contain opacity-95 sm:h-[378px]"
-            style={{ filter: 'saturate(0.75) brightness(0.95)' }}
-            aria-hidden="true"
-          />
-
-        </div>
-
         <div ref={manulOuterRef} className="absolute left-1/2 top-0 z-0 -translate-x-1/2 -translate-y-[71%] pointer-events-none">
-          <div
-            ref={manulInnerRef}
-            className="will-change-transform"
-            style={{ transform: 'translateY(35%) scale(0.96)', opacity: 0 }}
-          >
-            <ManulBlock />
+          <div className="relative">
+            <div className="absolute -right-2 -top-14 z-0 pointer-events-none sm:-right-10 sm:-top-10">
+              <img
+                ref={cloudImageRef}
+                src="/Облачко новое.webp"
+                alt=""
+                className="h-[220px] w-auto opacity-0 sm:h-[280px]"
+                style={{ transform: 'rotate(25deg) scale(0.8)' }}
+                aria-hidden="true"
+              />
+            </div>
+            <div className="absolute -left-8 top-[-40%] z-0 pointer-events-none sm:-left-14 sm:top-[-36%]">
+              <img
+                src="/hero-sticker.webp"
+                alt=""
+                className="h-[180px] w-auto rotate-0 object-contain opacity-95 sm:h-[260px]"
+                aria-hidden="true"
+              />
+            </div>
+            <div
+              ref={manulInnerRef}
+              className="will-change-transform"
+              style={{ transform: 'translateY(35%) scale(0.96)', opacity: 0 }}
+            >
+              <ManulBlock />
+            </div>
           </div>
         </div>
 

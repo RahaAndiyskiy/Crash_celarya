@@ -22,7 +22,7 @@ export default function Header() {
           <button
             type="button"
             aria-label="Поиск"
-            className="hero-icon-button hero-icon-button--lime inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white text-secondary transition hover:bg-slate-100"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white text-secondary transition hover:bg-slate-100"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="7" />
