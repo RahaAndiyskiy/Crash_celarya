@@ -3,12 +3,14 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/Nunito-Cyrillic-Regular.ttf') format('truetype');
+  font-stretch: normal;
+  src: url('/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/Nunito-Cyrillic-Bold.ttf') format('truetype');
+  font-stretch: normal;
+  src: url('/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
 }

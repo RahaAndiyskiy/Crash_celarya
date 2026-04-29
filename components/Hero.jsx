@@ -30,15 +30,26 @@ export default function Hero({ data }) {
   }, []);
 
   return (
-    <section className="relative w-full pt-28 pb-6 bg-slate-50 overflow-x-hidden overflow-y-visible">
+    <section className="relative w-full pt-48 sm:pt-56 bg-[#F5F3FF] overflow-x-hidden overflow-y-visible">
+      <div className="absolute right-12 -top-10 z-0 pointer-events-none sm:right-4 sm:-top-10">
+        <img
+          src="/Облачко новое.webp"
+          alt=""
+          className="h-[270px] w-auto opacity-90 sm:h-[3000px]"
+          style={{ transform: 'rotate(25deg)' }}
+          aria-hidden="true"
+        />
+      </div>
       <div className="mx-auto max-w-7xl relative overflow-visible px-4 sm:px-6">
-        <div className="absolute -left-[3rem] -top-40 z-0 pointer-events-none sm:-left-[10rem] sm:-top-68">
+        <div className="absolute -left-[0rem] -top-40 z-0 pointer-events-none sm:-left-[10rem] sm:-top-60">
           <img
             src="/клякса лайм.webp"
             alt=""
             className="h-[260px] w-auto rotate-180 object-contain opacity-95 sm:h-[360px]"
+            style={{ filter: 'saturate(0.75) brightness(0.95)' }}
             aria-hidden="true"
           />
+
         </div>
 
         <div ref={manulOuterRef} className="absolute left-1/2 top-0 z-0 -translate-x-1/2 -translate-y-[71%] pointer-events-none">
@@ -51,9 +62,9 @@ export default function Hero({ data }) {
           </div>
         </div>
 
-        <div className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 z-10 p-6 sm:p-10 text-center overflow-hidden shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)] bg-slate-50">
+        <div className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 z-10 p-6 sm:p-10 text-center overflow-hidden shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)] bg-white">
           <div className="relative mx-auto max-w-5xl">
-            <h1 className="mb-3 text-[44px] sm:text-[56px] font-bold leading-[1.05] font-nunito">
+            <h1 className="mb-3 text-[44px] sm:text-[56px] font-extrabold leading-[1.05] font-nunito">
               Канцтовары,
               <br />
               в которые ты{' '}
@@ -69,7 +80,7 @@ export default function Hero({ data }) {
               </span>
             </h1>
 
-            <p className="mb-5 text-base text-gray-500 leading-relaxed">
+            <p className="mb-5 text-base text-secondary leading-relaxed">
               Трендовая канцелярия, мерч блогеров и игрушки, которые хочется взять прямо сейчас!
             </p>
 
@@ -83,10 +94,10 @@ export default function Hero({ data }) {
                 />
               </div>
               <div className="relative flex flex-col gap-3 z-10">
-                <button className="w-full rounded-xl bg-lime-300 px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-lime-300">
+                <button className="w-full rounded-xl bg-[#A78BFA] px-4 py-3 text-base font-semibold text-white transition-colors hover:bg-[#9774f0]">
                   Смотреть хиты
                 </button>
-                <button className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-base font-semibold text-slate-900">
+                <button className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-base font-semibold text-primary">
                   <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-100 text-base">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
                       <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8Z" />
@@ -96,8 +107,7 @@ export default function Hero({ data }) {
                 </button>
               </div>
             </div>
-
-            <div className="mt-5 flex items-center gap-2 text-sm text-gray-500">
+            <div className="mt-5 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
               <span className="text-lg">🐾</span>
               <span className="border-b border-purple-400">Одобрено Манулом</span>
             </div>
