@@ -7,14 +7,17 @@ import ManulBlock from './ManulBlock';
 export default function Hero({ data }) {
   const manulOuterRef = useRef(null);
   const manulInnerRef = useRef(null);
+  const cloudLabelRef = useRef(null);
+  const cloudImageRef = useRef(null);
 
   useEffect(() => {
-    if (!manulOuterRef.current || !manulInnerRef.current) return;
+    if (!manulOuterRef.current || !manulInnerRef.current || !cloudLabelRef.current || !cloudImageRef.current) return;
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.9 });
       tl.set(manulOuterRef.current, { zIndex: 0 });
       tl.set(manulInnerRef.current, { yPercent: 35, scale: 0.96, opacity: 0 });
+      tl.set([cloudLabelRef.current, cloudImageRef.current], { autoAlpha: 0, scale: 0.8 });
       tl.to(manulInnerRef.current, {
         yPercent: 15,
         scale: 0.985,
@@ -24,6 +27,17 @@ export default function Hero({ data }) {
       });
       tl.to(manulInnerRef.current, { yPercent: -37, scale: 1, duration: 0.08, ease: 'power2.out' });
       tl.to(manulOuterRef.current, { zIndex: 20, duration: 0 }, '-=0.012');
+      tl.to([cloudLabelRef.current, cloudImageRef.current], {
+        autoAlpha: 1,
+        scale: 1.2,
+        duration: 0.35,
+        ease: 'power3.out',
+      }, '+=0.12');
+      tl.to([cloudLabelRef.current, cloudImageRef.current], {
+        scale: 1,
+        duration: 0.18,
+        ease: 'power2.out',
+      });
     }, manulOuterRef);
 
     return () => ctx.revert();
@@ -33,15 +47,16 @@ export default function Hero({ data }) {
     <section className="relative w-full pt-48 sm:pt-56 bg-[#F5F3FF] overflow-x-hidden overflow-y-visible">
       <div className="absolute right-12 -top-10 z-0 pointer-events-none sm:right-4 sm:-top-10">
         <img
+          ref={cloudImageRef}
           src="/Облачко новое.webp"
           alt=""
-          className="h-[270px] w-auto opacity-90 sm:h-[3000px]"
+          className="h-[270px] w-auto opacity-90 sm:h-[320px]"
           style={{ transform: 'rotate(25deg)' }}
           aria-hidden="true"
         />
       </div>
       <div className="mx-auto max-w-7xl relative overflow-visible px-4 sm:px-6">
-        <div className="absolute -left-[0rem] -top-40 z-0 pointer-events-none sm:-left-[10rem] sm:-top-60">
+        <div className="absolute -left-[0rem] -top-44 z-0 pointer-events-none sm:-left-[10rem] sm:-top-64">
           <img
             src="/клякса лайм.webp"
             alt=""
@@ -107,7 +122,7 @@ export default function Hero({ data }) {
                 </button>
               </div>
             </div>
-            <div className="mt-5 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
+            <div ref={cloudLabelRef} className="mt-5 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
               <span className="text-lg">🐾</span>
               <span className="border-b border-purple-400">Одобрено Манулом</span>
             </div>
