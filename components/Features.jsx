@@ -5,6 +5,18 @@ export default function Features({ items }) {
     3: 'bg-gradient-to-br from-rose-200 via-rose-300 to-rose-100',
   };
 
+  const cardTransforms = {
+    1: 'rotate-[1.5deg]',
+    2: '-rotate-[1.3deg]',
+    3: 'rotate-[0.9deg]',
+  };
+
+  const cardShapes = {
+    1: 'max-w-[420px] min-h-[280px] sm:min-h-[320px] rounded-[1.2rem]',
+    2: 'aspect-square max-w-[340px] sm:max-w-[380px] min-h-0 rounded-full',
+    3: 'max-w-[420px] min-h-[280px] sm:min-h-[320px] rounded-[1.2rem]',
+  };
+
   return (
     <section className="space-y-8 pt-8 px-4 sm:px-6">
       <div className="space-y-4 text-center mx-auto w-full max-w-4xl">
@@ -26,13 +38,13 @@ export default function Features({ items }) {
         </p>
         <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary sm:text-3xl">
           Это не просто{' '}
-          <span className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-purple-700 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
             магазин
           </span>
           .
           <br />
           Это место для{' '}
-          <span className="bg-gradient-to-r from-violet-500 via-fuchsia-500 to-purple-700 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
             тусовок
           </span>
           .
@@ -47,7 +59,7 @@ export default function Features({ items }) {
           {items.map((item) => (
             <article
               key={item.id}
-              className={`relative mx-auto max-w-[420px] min-h-[280px] sm:min-h-[320px] overflow-hidden rounded-[2rem] border-[12px] border-white ${cardBackgrounds[item.id] ?? 'bg-slate-100'} shadow-[8px_8px_1px_-2px_rgba(15,23,42,0.22)] transition hover:-translate-y-1`}
+              className={`relative mx-auto overflow-hidden border-[12px] border-white ${cardShapes[item.id] ?? 'max-w-[420px] min-h-[280px] sm:min-h-[320px] rounded-[1.2rem]'} ${cardBackgrounds[item.id] ?? 'bg-slate-100'} ${cardTransforms[item.id] ?? ''} transform-gpu shadow-[0_14px_10px_-8px_rgba(0,0,0,0.72)] transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0`}
             >
               <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 py-8 text-center">
                 <h3 className="text-[clamp(1.4rem,4vw,2.2rem)] font-nunito font-semibold text-primary tracking-[-0.03em]">
