@@ -45,6 +45,14 @@ export default function Header() {
             Войти
           </button>
         </div>
+        <div className="absolute left-1/2 top-full z-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none h-[72px] w-auto opacity-95 sm:h-[96px]">
+          <img
+            src="/newitem-sticker-button.webp"
+            alt=""
+            className="h-full w-auto rotate-10"
+            aria-hidden="true"
+          />
+        </div>
       </header>
 
       {menuOpen && (
