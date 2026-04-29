@@ -1,10 +1,12 @@
 export default function Features({ items }) {
   return (
     <section className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-violet-medium">УТП</p>
-          <h2 className="mt-3 text-2xl font-semibold text-primary sm:text-3xl">Что делает нас особенными</h2>
+      <div className="sticky top-24 z-10 bg-[#F5F3FF] pb-6">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-violet-medium">УТП</p>
+            <h2 className="mt-3 text-2xl font-semibold text-primary sm:text-3xl">Что делает нас особенными</h2>
+          </div>
         </div>
       </div>
       <div className="grid gap-5 md:grid-cols-3">
