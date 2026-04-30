@@ -17,8 +17,12 @@ export default function Products({ items }) {
             </p>
           </div>
         </div>
-        <div className="flex-shrink-0 relative -mt-2 -ml-12 ">
-          <img src="/Манул_Хит.webp" alt="" className="relative top-3 h-[220px] w-auto object-contain" />
+        <div className="flex-shrink-0 relative -mt-2 -ml-8">
+          <img
+            src="/Манул_Хит.webp"
+            alt=""
+            className="relative left-[-21px] top-[15px] h-[220px] w-auto object-contain"
+          />
         </div>
       </div>
 
