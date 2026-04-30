@@ -22,35 +22,22 @@ export default function Products({ items }) {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
-        {items.slice(0, 4).map((product) => (
-          <article key={product.id} className="overflow-hidden rounded-[1.25rem] bg-white p-5 shadow-[0_14px_0_rgba(0,0,0,0.08)]">
-            <img src={product.image} alt={product.name} className="h-56 w-full rounded-[1.25rem] object-cover" />
-            <div className="mt-5 space-y-3">
-              <h3 className="text-lg font-semibold text-primary">{product.name}</h3>
-              <p className="text-sm text-secondary">{product.description}</p>
-              <div className="flex items-center justify-between pt-3">
-                <span className="text-lg font-semibold text-primary">{product.price}</span>
-                <button className="rounded-full border border-violet-500 px-4 py-2 text-sm font-semibold text-violet-700 transition hover:bg-violet-50">
-                  В корзину
-                </button>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-
-      <div className="rounded-[2rem] border border-dashed border-violet-300 bg-white/90 p-5 shadow-[0_16px_0_rgba(0,0,0,0.06)]">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="text-lg font-semibold text-primary">Смотреть все хиты</p>
-            <p className="text-sm text-secondary">Ещё больше топовых товаров</p>
+      <div className="rounded-[1rem] bg-white/90 border border-violet-100 p-4 shadow-[0_16px_0_rgba(0,0,0,0.06)]">
+        <div className="-mx-4 overflow-x-auto pb-4 pl-4">
+          <div className="flex gap-4 snap-x snap-mandatory">
+            {items.slice(0, 4).map((product) => (
+              <article key={product.id} className="min-w-[240px] flex-shrink-0 snap-start overflow-hidden rounded-[1.25rem] bg-white p-4 shadow-[0_20px_40px_-24px_rgba(20,23,42,0.16)] font-nunito">
+                <img src={product.image} alt={product.name} className="h-44 w-full rounded-[1rem] object-cover" />
+                <div className="mt-4 space-y-3 text-left">
+                  <h3 className="text-base font-black text-primary">{product.name}</h3>
+                  <span className="block text-lg font-black text-primary">{product.price}</span>
+                </div>
+              </article>
+            ))}
           </div>
-          <button className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-violet-500 text-white transition hover:bg-violet-600">
-            →
-          </button>
         </div>
       </div>
+
     </section>
   );
 }
