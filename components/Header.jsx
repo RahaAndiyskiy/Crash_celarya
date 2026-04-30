@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-3xl items-center justify-between rounded-b-[28px] rounded-t-none bg-gradient-to-r from-rose-100 via-fuchsia-100 to-yellow-200 px-4 py-3 border-[12px] border-white shadow-[0_16px_30px_-25px_rgba(15,23,42,0.35)]">
+      <header className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-3xl items-center justify-between rounded-b-[28px] rounded-t-none bg-gradient-to-r from-rose-100 via-fuchsia-100 to-yellow-200 px-4 py-3 border-[12px] border-white border-t-0 shadow-[0_16px_30px_-25px_rgba(15,23,42,0.35)]">
         <div className="flex items-center gap-2">
           <img src="/LOGO.webp" alt="Крашцелярия" className="h-18 w-auto max-w-[140px] object-contain sm:h-22 sm:max-w-[160px]" />
         </div>
@@ -22,7 +22,7 @@ export default function Header() {
           <button
             type="button"
             aria-label="Поиск"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white text-secondary transition hover:bg-slate-100"
+            className="hidden inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white text-secondary transition hover:bg-slate-100"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="7" />
@@ -45,7 +45,7 @@ export default function Header() {
             Войти
           </button>
         </div>
-        <div className="absolute left-1/2 top-full z-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none h-[72px] w-auto opacity-95 sm:h-[96px]">
+        <div className="absolute left-1/2 top-full z-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none h-[84px] w-auto opacity-95 sm:h-[110px]">
           <img
             src="/newitem-sticker-button.webp"
             alt=""

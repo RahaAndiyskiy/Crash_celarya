@@ -10,9 +10,9 @@ export default function Features({ items }) {
   };
 
   const cardTransforms = {
-    1: 'rotate-[1.5deg]',
-    2: '-rotate-[1.3deg]',
-    3: 'rotate-[0.9deg]',
+    1: 'rotate-[3deg]',
+    2: '-rotate-[2.5deg]',
+    3: 'rotate-[1.8deg]',
   };
 
   const cardShapes = {
@@ -123,7 +123,7 @@ export default function Features({ items }) {
           <img
             src="/manul_dream.webp"
             alt="Manul Dream"
-            className="pointer-events-none absolute left-1/2 top-[100%] -translate-x-1/2 z-0 w-[240px] sm:w-[280px] md:w-[340px]"
+            className="pointer-events-none absolute left-1/2 top-[100%] -translate-x-1/2 z-0 w-[270px] sm:w-[315px] md:w-[385px]"
           />
         </div>
       ) : (
