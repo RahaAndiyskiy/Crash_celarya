@@ -59,7 +59,7 @@ export default function Header() {
               type="button"
               aria-label="Закрыть меню"
               onClick={() => setMenuOpen(false)}
-              className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-[1.2rem] border-[12px] border-white bg-[#A78BFA] text-xl text-white shadow-[0_14px_10px_-8px_rgba(0,0,0,0.72)] transition duration-300 ease-out hover:bg-[#9774f0]"
+              className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-none border-[12px] border-white bg-[#A78BFA] text-xl text-white shadow-[0_14px_10px_-8px_rgba(0,0,0,0.72)] transition duration-300 ease-out hover:bg-[#9774f0]"
             >
               ✕
             </button>
@@ -75,7 +75,7 @@ export default function Header() {
               <a
                 href="#categories"
                 onClick={() => setMenuOpen(false)}
-                className="block rounded-[1.2rem] border-[12px] border-white bg-gradient-to-br from-violet-200 via-fuchsia-200 to-violet-100 px-6 py-5 text-lg font-semibold text-primary shadow-[0_10px_0_rgba(0,0,0,0.78)] transform-gpu transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0 -rotate-[2deg]"
+                className="block rounded-none border-[12px] border-white bg-gradient-to-br from-violet-200 via-fuchsia-200 to-violet-100 px-6 py-5 text-lg font-semibold text-primary shadow-[0_10px_0_rgba(0,0,0,0.78)] transform-gpu transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0 -rotate-[2deg]"
               >
                 Категории
               </a>
