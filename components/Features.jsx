@@ -45,7 +45,7 @@ export default function Features({ items }) {
   };
 
   return (
-    <section className="space-y-8 pt-8 px-4 sm:px-6">
+    <section className="space-y-8 pt-8 px-4 sm:px-6 pb-36 sm:pb-40 lg:pb-48">
       <div className="space-y-4 text-center mx-auto w-full max-w-4xl">
         <p
           className="mx-auto inline-flex rounded-[1rem] px-5 py-1 text-center text-[0.9rem] font-black uppercase tracking-[0.2em] sm:text-[1.1rem]"
@@ -123,7 +123,7 @@ export default function Features({ items }) {
           <img
             src="/manul_dream.webp"
             alt="Manul Dream"
-            className="pointer-events-none absolute left-1/2 top-[98%] -translate-x-1/2 z-0 w-[240px] sm:w-[280px] md:w-[340px]"
+            className="pointer-events-none absolute left-1/2 top-[100%] -translate-x-1/2 z-0 w-[240px] sm:w-[280px] md:w-[340px]"
           />
         </div>
       ) : (

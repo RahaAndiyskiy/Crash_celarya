@@ -1,6 +1,6 @@
 export default function Products({ items }) {
   return (
-    <section id="products" className="space-y-6">
+    <section id="products" className="space-y-6 mt-24">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-medium">Хиты</p>
