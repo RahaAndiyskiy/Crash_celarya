@@ -5,7 +5,6 @@ export default function Footer() {
         <div className="text-lg font-semibold text-primary">Крашцелярия</div>
         <nav className="flex flex-wrap gap-4 text-sm">
           <a href="#products" className="hover:text-primary">Хиты</a>
-          <a href="#categories" className="hover:text-primary">Категории</a>
           <a href="#contacts" className="hover:text-primary">Контакты</a>
         </nav>
       </div>

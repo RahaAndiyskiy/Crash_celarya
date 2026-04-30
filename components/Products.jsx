@@ -17,11 +17,11 @@ export default function Products({ items }) {
             </p>
           </div>
         </div>
-        <div className="flex-shrink-0 relative -mt-2 -ml-10">
+        <div className="flex-shrink-0 relative -mt-2 -ml-10 max-[390px]:-ml-12 max-[360px]:-ml-14">
           <img
             src="/Манул_Хит.webp"
             alt=""
-            className="relative left-[-21px] top-[15px] h-[180px] w-auto object-contain drop-shadow-[0_4px_0_rgba(0,0,0,0.7)]"
+            className="relative left-[-21px] max-[390px]:left-[-24px] max-[360px]:left-[-26px] top-[15px] h-[180px] w-auto object-contain drop-shadow-[0_4px_0_rgba(0,0,0,0.7)]"
           />
         </div>
       </div>

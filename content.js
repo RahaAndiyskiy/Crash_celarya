@@ -63,15 +63,6 @@ export const products = [
   },
 ];
 
-export const categories = [
-  { id: 1, title: 'Ручки', icon: '✏️' },
-  { id: 2, title: 'Блокноты', icon: '📓' },
-  { id: 3, title: 'Мерч', icon: '🧢' },
-  { id: 4, title: 'Игрушки', icon: '🧸' },
-  { id: 5, title: 'Аксессуары', icon: '🎒' },
-  { id: 6, title: 'Подарки', icon: '🎁' },
-];
-
 export const contacts = {
   location: 'Москва, ул. Цветочная 15',
   hours: 'Пн–Вс 10:00–20:00',

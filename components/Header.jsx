@@ -14,7 +14,6 @@ export default function Header() {
 
         <nav className="hidden gap-4 md:flex text-sm text-secondary">
           <a href="#products" className="hover:text-primary">Хиты</a>
-          <a href="#categories" className="hover:text-primary">Категории</a>
           <a href="#contacts" className="hover:text-primary">Контакты</a>
         </nav>
 
@@ -72,13 +71,6 @@ export default function Header() {
                 className="block rounded-[1.2rem] border-[12px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-6 py-5 text-lg font-semibold text-primary shadow-[0_10px_0_rgba(0,0,0,0.78)] transform-gpu transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0 rotate-[2deg]"
               >
                 Хиты
-              </a>
-              <a
-                href="#categories"
-                onClick={() => setMenuOpen(false)}
-                className="block rounded-none border-[12px] border-white bg-gradient-to-br from-violet-200 via-fuchsia-200 to-violet-100 px-6 py-5 text-lg font-semibold text-primary shadow-[0_10px_0_rgba(0,0,0,0.78)] transform-gpu transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0 -rotate-[2deg]"
-              >
-                Категории
               </a>
               <a
                 href="#contacts"

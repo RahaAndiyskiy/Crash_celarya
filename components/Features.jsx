@@ -89,18 +89,18 @@ export default function Features({ items }) {
           <img
             src="/Манул_Топ.webp"
             alt="Манул"
-            className="h-[320px] w-[220px] object-contain absolute -left-[35px] top-[45px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
+            className="h-[320px] w-[220px] object-contain absolute -left-[35px] top-[45px] max-[420px]:-left-[48px] max-[420px]:top-[43px] max-[390px]:-left-[52px] max-[390px]:top-[42px] max-[360px]:-left-[56px] max-[360px]:top-[40px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
           />
         </div>
 
         <div className="flex-1 min-w-0 w-full space-y-4 text-left">
           <p
-            className="self-start inline-flex rounded-none border-[5px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-5 py-1 font-black uppercase tracking-[0.2em] text-primary shadow-[6px_6px_0_rgba(0,0,0,0.6)] sm:text-[1.1rem]"
+            className="self-start inline-flex rounded-none border-[5px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-5 py-1 font-black uppercase tracking-[0.2em] text-primary shadow-[6px_6px_0_rgba(0,0,0,0.6)] sm:text-[1.1rem] [@media(max-width:390px)]:text-[10px]"
           >
             НАШ ВАЙБ
           </p>
 
-          <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary text-left sm:text-3xl">
+          <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary text-left sm:text-3xl [@media(max-width:390px)]:text-[20px]">
             Это не просто магазин.
             <br />
             Это место для{' '}
@@ -110,7 +110,7 @@ export default function Features({ items }) {
             .
           </h2>
 
-          <p className="text-sm text-secondary sm:text-base text-left leading-relaxed">
+          <p className="text-sm text-secondary sm:text-base text-left leading-relaxed [@media(max-width:390px)]:text-[13px]">
             Тут есть все, что нужно
             <span className="block sm:inline"> для школы, учебы и твоего стиля.</span>
           </p>
