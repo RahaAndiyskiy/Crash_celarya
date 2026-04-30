@@ -35,7 +35,7 @@ export default function Features({ items }) {
     ],
     2: [
       { position: 'top-5 right-5', icon: FiZap },
-      { position: 'left-1/2 bottom-6 -translate-x-1/2', icon: FaGlasses, sizeOverride: 'h-18 w-18', rotateOverride: '-rotate-[12deg]', colorOverride: 'text-violet-300' },
+      { position: 'left-1/2 bottom-6 -translate-x-1/2', icon: FaGlasses, sizeOverride: 'h-24 w-24', rotateOverride: '-rotate-[12deg]', colorOverride: 'text-violet-300' },
     ],
     3: [
       { position: 'top-5 left-10', icon: FiHeart },
@@ -82,7 +82,7 @@ export default function Features({ items }) {
       </div>
 
       {items?.length ? (
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <div className="relative grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {items.map((item) => (
             <article
               key={item.id}
@@ -120,6 +120,11 @@ export default function Features({ items }) {
               </div>
             </article>
           ))}
+          <img
+            src="/manul_dream.webp"
+            alt="Manul Dream"
+            className="pointer-events-none absolute left-1/2 top-[98%] -translate-x-1/2 z-0 w-[240px] sm:w-[280px] md:w-[340px]"
+          />
         </div>
       ) : (
         <div className="rounded-[2rem] bg-white/90 p-8 text-center text-sm text-secondary ring-1 ring-slate-200/70 shadow-[0_25px_60px_-35px_rgba(15,23,42,0.16)]">
