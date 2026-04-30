@@ -77,11 +77,11 @@ export default function Hero({ data }) {
 
         <div className="relative z-10 mx-auto w-full px-4 py-8 sm:px-6 sm:py-10 text-center overflow-hidden rounded-t-[32px] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)] bg-white">
           <div className="relative mx-auto w-full max-w-3xl">
-            <h1 className="mb-3 text-4xl sm:text-5xl md:text-[3.75rem] font-black leading-[1.02] sm:leading-[1.04] font-nunito">
+            <h1 className="mb-2 text-4xl sm:text-2xl md:text-3xl font-black sm:leading-[1.04] font-nunito">
               Канцтовары,
               <br />
               в которые ты{' '}
-              <span className="relative inline-block whitespace-nowrap text-[3.5rem] sm:text-[4.5rem] leading-none bg-gradient-to-r from-violet-500 via-fuchsia-500 to-yellow-400 bg-clip-text text-transparent">
+              <span className="relative inline-block whitespace-normal text-[3.5rem] sm:text-[4.5rem] leading-none bg-gradient-to-r from-violet-500 via-fuchsia-500 to-yellow-400 bg-clip-text text-transparent">
                 влюбишься
                 <img
                   src="/Сердце лайм.webp"

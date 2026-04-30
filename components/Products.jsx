@@ -7,7 +7,7 @@ export default function Products({ items }) {
             Хиты
           </div>
           <div className="text-left">
-            <h2 className="text-5xl font-nunito font-black tracking-tight text-primary leading-[0.95]">
+            <h2 className="text-3xl font-nunito font-black tracking-tight text-primary leading-[0.95]">
               Популярные
               <br />
               товары
@@ -17,16 +17,10 @@ export default function Products({ items }) {
             </p>
           </div>
         </div>
-        <div className="flex-shrink-0">
-          <img src="/Манул_Хиты.webp" alt="" className="h-[180px] w-auto object-contain" />
+        <div className="flex-shrink-0 relative -mt-2 -ml-12">
+          <img src="/Манул_Хит.webp" alt="" className="relative top-3 h-[220px] w-auto object-contain" />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
-          <button className="rounded-full border border-slate-200 bg-violet-600/10 px-4 py-3 text-sm font-semibold text-violet-700">Все</button>
-          <button className="rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-primary">Канцелярия</button>
-          <button className="rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-primary">Мерч</button>
-          <button className="rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-primary">Игрушки</button>
-        </div>
 
       <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
         {items.slice(0, 4).map((product) => (

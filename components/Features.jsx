@@ -81,13 +81,13 @@ export default function Features({ items }) {
   };
 
   return (
-  <section className="space-y-8 pt-8 px-4 sm:px-6 pb-36 sm:pb-40 lg:pb-48 bg-gradient-to-b from-white to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
+  <section className="space-y-8 pt-8 pb-8 px-4 sm:px-6  sm:pb-10 lg:pb-12 bg-gradient-to-b from-white to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
     <div className="mx-auto w-full max-w-6xl">
       <div className="flex flex-row flex-nowrap items-center overflow-visible gap-8">
         
         <div className="flex-shrink-0 w-[140px] relative">
           <img
-            src="/Манул_Хиты.webp"
+            src="/Манул_Топ.webp"
             alt="Манул"
             className="h-[320px] w-[220px] object-contain absolute -left-[35px] top-[45px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
           />
