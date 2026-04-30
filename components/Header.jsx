@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-3xl items-center justify-between rounded-b-[28px] rounded-t-none bg-gradient-to-r from-rose-100 via-fuchsia-100 to-yellow-200/90 px-4 py-3 backdrop-blur-xl backdrop-saturate-150 border-b border-white/20 shadow-[0_16px_30px_-25px_rgba(15,23,42,0.35)]">
+      <header className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-3xl items-center justify-between rounded-b-[28px] rounded-t-none bg-gradient-to-r from-rose-100 via-fuchsia-100 to-yellow-200 px-4 py-3 border-[12px] border-white shadow-[0_16px_30px_-25px_rgba(15,23,42,0.35)]">
         <div className="flex items-center gap-2">
           <img src="/LOGO.webp" alt="Крашцелярия" className="h-18 w-auto max-w-[140px] object-contain sm:h-22 sm:max-w-[160px]" />
         </div>
