@@ -81,42 +81,47 @@ export default function Features({ items }) {
   };
 
   return (
-    <section className="space-y-8 pt-8 px-4 sm:px-6 pb-36 sm:pb-40 lg:pb-48 bg-gradient-to-b from-white to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
-      <div className="mx-auto w-full max-w-6xl">
-        <div className="flex flex-row items-start gap-8">
-          <div className="flex-shrink-0">
-            <img
-              src="/Манул_Хиты.webp"
-              alt="Манул"
-              className="h-[220px] w-auto object-contain"
-            />
-          </div>
-          <div className="flex-1 max-w-[520px] space-y-4 text-left">
-            <p
-              className="inline-flex rounded-none border-[12px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-5 py-1 text-[0.9rem] font-black uppercase tracking-[0.2em] text-primary shadow-[6px_6px_0_rgba(0,0,0,0.6)] sm:text-[1.1rem] -rotate-[6deg]"
-            >
-              НАШ ВАЙБ
-            </p>
-            <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary sm:text-3xl">
-              Это не просто{' '}
-              <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
-                магазин
-              </span>
-              .
-              <br />
-              Это место для{' '}
-              <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
-                тусовок
-              </span>
-              .
-            </h2>
-            <p className="text-sm text-secondary sm:text-base">
-              Тут есть все, что нужно
-              <span className="block sm:inline"> для школы, учебы и твоего стиля.</span>
-            </p>
-          </div>
+  <section className="space-y-8 pt-8 px-4 sm:px-6 pb-36 sm:pb-40 lg:pb-48 bg-gradient-to-b from-white to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
+    <div className="mx-auto w-full max-w-6xl">
+      <div className="flex flex-row flex-nowrap items-center overflow-visible gap-8">
+        
+        <div className="flex-shrink-0 w-[140px] relative">
+          <img
+            src="/Манул_Хиты.webp"
+            alt="Манул"
+            className="h-[320px] w-[220px] object-contain absolute left-0 top-1/2 -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
+          />
         </div>
+
+        <div className="flex-1 min-w-0 w-full space-y-4 text-right">
+          <p
+            className="mx-auto inline-flex rounded-none border-[12px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-5 py-1 text-[0.9rem] font-black uppercase tracking-[0.2em] text-primary shadow-[6px_6px_0_rgba(0,0,0,0.6)] sm:text-[1.1rem] -rotate-[6deg]"
+          >
+            НАШ ВАЙБ
+          </p>
+
+          <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary sm:text-3xl">
+            Это не просто{' '}
+            <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
+              магазин
+            </span>
+            .
+            <br />
+            Это место для{' '}
+            <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
+              тусовок
+            </span>
+            .
+          </h2>
+
+          <p className="text-sm text-secondary sm:text-base">
+            Тут есть все, что нужно
+            <span className="block sm:inline"> для школы, учебы и твоего стиля.</span>
+          </p>
+        </div>
+
       </div>
+    </div>
 
       {items?.length ? (
         <div className="relative grid gap-4 sm:grid-cols-2 md:grid-cols-3">
