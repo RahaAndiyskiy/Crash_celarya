@@ -41,11 +41,8 @@ export default function Header() {
               <line x1="3" y1="18" x2="21" y2="18" />
             </svg>
           </button>
-          <button className="hidden rounded-full bg-violet-700 px-4 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-violet-600 md:inline-flex">
-            Войти
-          </button>
         </div>
-        <div className="absolute left-1/2 top-full z-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none h-[84px] w-auto opacity-95 sm:h-[110px]">
+        <div className="absolute left-[55%] top-full z-0 -translate-x-[40%] -translate-y-1/2 pointer-events-none h-[84px] w-auto opacity-95 sm:left-[60%] sm:h-[110px]">
           <img
             src="/newitem-sticker-button.webp"
             alt=""
@@ -56,13 +53,13 @@ export default function Header() {
       </header>
 
       {menuOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/85 p-6 backdrop-blur-xl md:hidden">
-          <div className="relative w-full max-w-md rounded-[2rem] border border-white/10 bg-slate-900/95 p-8 text-center text-white shadow-2xl">
+        <div className="menu-backdrop fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-rose-100/80 via-fuchsia-100/70 to-yellow-200/70 p-6 backdrop-blur-xl md:hidden">
+          <div className="relative w-full max-w-md rounded-[2rem] p-8 text-center text-white">
             <button
               type="button"
               aria-label="Закрыть меню"
               onClick={() => setMenuOpen(false)}
-              className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-slate-800 text-xl text-white transition hover:bg-slate-700"
+              className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-[1.2rem] border-[12px] border-white bg-[#A78BFA] text-xl text-white shadow-[0_14px_10px_-8px_rgba(0,0,0,0.72)] transition duration-300 ease-out hover:bg-[#9774f0]"
             >
               ✕
             </button>
@@ -71,31 +68,34 @@ export default function Header() {
               <a
                 href="#products"
                 onClick={() => setMenuOpen(false)}
-                className="block rounded-3xl bg-white/10 px-6 py-4 text-lg font-semibold text-white transition hover:bg-white/20"
+                className="block rounded-[1.2rem] border-[12px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-6 py-5 text-lg font-semibold text-primary shadow-[0_10px_0_rgba(0,0,0,0.78)] transform-gpu transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0 rotate-[2deg]"
               >
                 Хиты
               </a>
               <a
                 href="#categories"
                 onClick={() => setMenuOpen(false)}
-                className="block rounded-3xl bg-white/10 px-6 py-4 text-lg font-semibold text-white transition hover:bg-white/20"
+                className="block rounded-[1.2rem] border-[12px] border-white bg-gradient-to-br from-violet-200 via-fuchsia-200 to-violet-100 px-6 py-5 text-lg font-semibold text-primary shadow-[0_10px_0_rgba(0,0,0,0.78)] transform-gpu transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0 -rotate-[2deg]"
               >
                 Категории
               </a>
               <a
                 href="#contacts"
                 onClick={() => setMenuOpen(false)}
-                className="block rounded-3xl bg-white/10 px-6 py-4 text-lg font-semibold text-white transition hover:bg-white/20"
+                className="block rounded-[1.2rem] border-[12px] border-white bg-gradient-to-br from-rose-200 via-rose-300 to-rose-100 px-6 py-5 text-lg font-semibold text-primary shadow-[0_10px_0_rgba(0,0,0,0.78)] transform-gpu transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0 rotate-[1deg]"
               >
                 Контакты
               </a>
             </div>
 
-            <div className="mt-8">
-              <button className="w-full rounded-full bg-violet-medium px-6 py-4 text-sm font-semibold text-white transition hover:bg-violet-500">
-                Войти
-              </button>
+            <div className="mt-10 flex justify-center">
+              <img
+                src="/Manul_02.webp"
+                alt="Манул"
+                className="h-[21rem] w-auto object-contain drop-shadow-[0_10px_0_rgba(0,0,0,0.78)]"
+              />
             </div>
+
           </div>
         </div>
       )}
