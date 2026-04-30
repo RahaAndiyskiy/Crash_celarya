@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-3xl items-center justify-between rounded-b-[28px] rounded-t-none bg-gradient-to-r from-rose-100 via-fuchsia-100 to-yellow-200 px-4 py-3 border-[12px] border-white border-t-0 shadow-[0_16px_30px_-25px_rgba(15,23,42,0.35)]">
+      <header className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-3xl items-center justify-between rounded-b-[28px] rounded-t-none bg-gradient-to-r from-rose-100 via-fuchsia-100 to-yellow-200 px-4 py-3 border-[12px] border-white border-t-0 shadow-[0_6px_0_rgba(0,0,0,0.6)]">
         <div className="flex items-center gap-2">
           <img src="/LOGO.webp" alt="Крашцелярия" className="h-18 w-auto max-w-[140px] object-contain sm:h-22 sm:max-w-[160px]" />
         </div>
@@ -51,6 +51,7 @@ export default function Header() {
           />
         </div>
       </header>
+      <img src="/Manul_02.webp" alt="" aria-hidden="true" className="sr-only" />
 
       {menuOpen && (
         <div className="menu-backdrop fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-rose-100/80 via-fuchsia-100/70 to-yellow-200/70 p-6 backdrop-blur-xl md:hidden">

@@ -16,9 +16,10 @@ export default function Home() {
 
       <Hero data={heroText} />
 
+      <Features items={features} />
+
       <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
         <main className="space-y-20 pt-0">
-          <Features items={features} />
           <Products items={products} />
           <Categories items={categories} />
           <Contacts data={contacts} />

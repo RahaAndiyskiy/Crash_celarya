@@ -81,35 +81,46 @@ export default function Features({ items }) {
   };
 
   return (
-    <section className="space-y-8 pt-8 px-4 sm:px-6 pb-36 sm:pb-40 lg:pb-48">
-      <div className="space-y-4 text-center mx-auto w-full max-w-5xl xl:max-w-6xl">
-        <p
-          className="mx-auto inline-flex rounded-none border-[12px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-5 py-1 text-center text-[0.9rem] font-black uppercase tracking-[0.2em] text-primary shadow-[6px_6px_0_rgba(0,0,0,0.6)] sm:text-[1.1rem] -rotate-[6deg]"
-        >
-          НАШ ВАЙБ
-        </p>
-        <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary sm:text-3xl">
-          Это не просто{' '}
-          <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
-            магазин
-          </span>
-          .
-          <br />
-          Это место для{' '}
-          <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
-            тусовок
-          </span>
-          .
-        </h2>
-        <p className="mx-auto max-w-2xl text-sm text-secondary sm:text-base">
-          Тут есть все, что нужно
-          <span className="block sm:inline"> для школы, учебы и твоего стиля.</span>
-        </p>
+    <section className="space-y-8 pt-8 px-4 sm:px-6 pb-36 sm:pb-40 lg:pb-48 bg-gradient-to-b from-white to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
+      <div className="mx-auto w-full max-w-6xl">
+        <div className="flex flex-row items-start gap-8">
+          <div className="flex-shrink-0">
+            <img
+              src="/Манул_Хиты.webp"
+              alt="Манул"
+              className="h-[220px] w-auto object-contain"
+            />
+          </div>
+          <div className="flex-1 max-w-[520px] space-y-4 text-left">
+            <p
+              className="inline-flex rounded-none border-[12px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-5 py-1 text-[0.9rem] font-black uppercase tracking-[0.2em] text-primary shadow-[6px_6px_0_rgba(0,0,0,0.6)] sm:text-[1.1rem] -rotate-[6deg]"
+            >
+              НАШ ВАЙБ
+            </p>
+            <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary sm:text-3xl">
+              Это не просто{' '}
+              <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
+                магазин
+              </span>
+              .
+              <br />
+              Это место для{' '}
+              <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
+                тусовок
+              </span>
+              .
+            </h2>
+            <p className="text-sm text-secondary sm:text-base">
+              Тут есть все, что нужно
+              <span className="block sm:inline"> для школы, учебы и твоего стиля.</span>
+            </p>
+          </div>
+        </div>
       </div>
 
       {items?.length ? (
         <div className="relative grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {items.map((item) => (
+          {items.slice(0, 4).map((item) => (
             <article
               key={item.id}
               className={`relative mx-auto overflow-hidden border-[12px] border-white ${cardShapes[item.id] ?? 'max-w-[420px] min-h-[280px] sm:min-h-[320px] rounded-[1.2rem]'} ${cardBackgrounds[item.id] ?? 'bg-slate-100'} ${cardTransforms[item.id] ?? ''} transform-gpu shadow-[10px_10px_0_rgba(0,0,0,0.78)] transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0`}
@@ -151,11 +162,6 @@ export default function Features({ items }) {
               </div>
             </article>
           ))}
-          <img
-            src="/manul_dreamV2.webp"
-            alt="Manul Dream"
-            className="pointer-events-none absolute left-1/2 top-[100%] -translate-x-1/2 z-0 w-[270px] sm:w-[315px] md:w-[385px]"
-          />
         </div>
       ) : (
         <div className="rounded-[2rem] bg-white/90 p-8 text-center text-sm text-secondary ring-1 ring-slate-200/70 shadow-[0_25px_60px_-35px_rgba(15,23,42,0.16)]">
