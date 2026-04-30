@@ -1,6 +1,10 @@
+import { FiHeart, FiStar, FiZap } from 'react-icons/fi';
+import { FaGlasses } from 'react-icons/fa';
+import { IoSparkles } from 'react-icons/io5';
+
 export default function Features({ items }) {
   const cardBackgrounds = {
-    1: 'bg-gradient-to-br from-lime-200 via-lime-300 to-lime-100',
+    1: 'bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100',
     2: 'bg-gradient-to-br from-violet-200 via-fuchsia-200 to-violet-100',
     3: 'bg-gradient-to-br from-rose-200 via-rose-300 to-rose-100',
   };
@@ -15,6 +19,29 @@ export default function Features({ items }) {
     1: 'max-w-[420px] min-h-[280px] sm:min-h-[320px] rounded-[1.2rem]',
     2: 'aspect-square max-w-[340px] sm:max-w-[380px] min-h-0 rounded-full',
     3: 'max-w-[420px] min-h-[280px] sm:min-h-[320px] rounded-[1.2rem]',
+  };
+
+  const pastelColors = ['text-rose-300', 'text-fuchsia-300', 'text-violet-300', 'text-sky-300', 'text-emerald-300', 'text-lime-300', 'text-amber-300', 'text-cyan-300'];
+  const iconSizes = ['h-18 w-18', 'h-20 w-20', 'h-22 w-22', 'h-24 w-24'];
+  const iconRotations = ['rotate-[8deg]', 'rotate-[12deg]', 'rotate-[16deg]', 'rotate-[20deg]'];
+
+  const seededOption = (options, seed) => options[seed % options.length];
+  const seedFor = (itemId, index) => (itemId * 7 + index * 13 + 11) % 97;
+
+  const cardDecorations = {
+    1: [
+      { position: 'top-6 left-3', icon: FiStar, sizeOverride: 'h-20 w-20', rotateOverride: '-rotate-[10deg]' },
+      { position: 'top-6 right-10', icon: IoSparkles },
+    ],
+    2: [
+      { position: 'top-5 right-5', icon: FiZap },
+      { position: 'left-1/2 bottom-6 -translate-x-1/2', icon: FaGlasses, sizeOverride: 'h-18 w-18', rotateOverride: '-rotate-[12deg]', colorOverride: 'text-violet-300' },
+    ],
+    3: [
+      { position: 'top-5 left-10', icon: FiHeart },
+      { position: 'top-8 right-4', icon: FiStar },
+      { position: 'bottom-4 right-10', icon: IoSparkles },
+    ],
   };
 
   return (
@@ -61,6 +88,23 @@ export default function Features({ items }) {
               key={item.id}
               className={`relative mx-auto overflow-hidden border-[12px] border-white ${cardShapes[item.id] ?? 'max-w-[420px] min-h-[280px] sm:min-h-[320px] rounded-[1.2rem]'} ${cardBackgrounds[item.id] ?? 'bg-slate-100'} ${cardTransforms[item.id] ?? ''} transform-gpu shadow-[0_14px_10px_-8px_rgba(0,0,0,0.72)] transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0`}
             >
+              <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+                {(cardDecorations[item.id] ?? []).map((dec, index) => {
+                  const Icon = dec.icon;
+                  const seed = seedFor(item.id, index);
+                  const colorClass = dec.colorOverride ?? seededOption(pastelColors, seed + 1);
+                  const sizeClass = dec.sizeOverride ?? seededOption(iconSizes, seed + 2);
+                  const rotateClass = dec.rotateOverride ?? seededOption(iconRotations, seed + 3);
+                  return (
+                    <span
+                      key={index}
+                      className={`absolute ${dec.position} ${sizeClass} ${rotateClass} ${colorClass} opacity-80`}
+                    >
+                      <Icon className="h-full w-full" />
+                    </span>
+                  );
+                })}
+              </div>
               <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 py-8 text-center">
                 <h3 className="text-[clamp(1.4rem,4vw,2.2rem)] font-nunito font-semibold text-primary tracking-[-0.03em]">
                   {item.title.split('. ').map((part, index, array) => (
