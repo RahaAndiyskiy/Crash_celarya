@@ -7,21 +7,21 @@ export default function Products({ items }) {
             Хиты
           </div>
           <div className="text-left">
-            <h2 className="text-3xl font-nunito font-black tracking-tight text-primary leading-[0.95]">
+            <h2 className="text-2xl font-nunito font-black tracking-tight text-primary leading-[0.95]">
               Популярные
               <br />
               товары
             </h2>
-            <p className="mt-3 font-rubik text-sm text-secondary leading-relaxed">
+            <p className="mt-2 font-rubik text-[14px] text-secondary leading-relaxed">
               То, что берут чаще всего.
             </p>
           </div>
         </div>
-        <div className="flex-shrink-0 relative -mt-2 -ml-8">
+        <div className="flex-shrink-0 relative -mt-2 -ml-10">
           <img
             src="/Манул_Хит.webp"
             alt=""
-            className="relative left-[-21px] top-[15px] h-[220px] w-auto object-contain"
+            className="relative left-[-21px] top-[15px] h-[180px] w-auto object-contain drop-shadow-[0_4px_0_rgba(0,0,0,0.7)]"
           />
         </div>
       </div>
