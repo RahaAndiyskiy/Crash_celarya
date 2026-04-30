@@ -152,7 +152,7 @@ export default function Features({ items }) {
             </article>
           ))}
           <img
-            src="/manul_dream.webp"
+            src="/manul_dreamV2.webp"
             alt="Manul Dream"
             className="pointer-events-none absolute left-1/2 top-[100%] -translate-x-1/2 z-0 w-[270px] sm:w-[315px] md:w-[385px]"
           />
