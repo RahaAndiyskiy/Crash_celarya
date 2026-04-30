@@ -89,23 +89,19 @@ export default function Features({ items }) {
           <img
             src="/Манул_Хиты.webp"
             alt="Манул"
-            className="h-[320px] w-[220px] object-contain absolute left-0 top-1/2 -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
+            className="h-[320px] w-[220px] object-contain absolute -left-[35px] top-[45px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
           />
         </div>
 
-        <div className="flex-1 min-w-0 w-full space-y-4 text-right">
+        <div className="flex-1 min-w-0 w-full space-y-4 text-left">
           <p
-            className="mx-auto inline-flex rounded-none border-[12px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-5 py-1 text-[0.9rem] font-black uppercase tracking-[0.2em] text-primary shadow-[6px_6px_0_rgba(0,0,0,0.6)] sm:text-[1.1rem] -rotate-[6deg]"
+            className="self-start inline-flex rounded-none border-[5px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-5 py-1 font-black uppercase tracking-[0.2em] text-primary shadow-[6px_6px_0_rgba(0,0,0,0.6)] sm:text-[1.1rem]"
           >
             НАШ ВАЙБ
           </p>
 
-          <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary sm:text-3xl">
-            Это не просто{' '}
-            <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
-              магазин
-            </span>
-            .
+          <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary text-left sm:text-3xl">
+            Это не просто магазин.
             <br />
             Это место для{' '}
             <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
@@ -114,7 +110,7 @@ export default function Features({ items }) {
             .
           </h2>
 
-          <p className="text-sm text-secondary sm:text-base">
+          <p className="text-sm text-secondary sm:text-base text-left leading-relaxed">
             Тут есть все, что нужно
             <span className="block sm:inline"> для школы, учебы и твоего стиля.</span>
           </p>
