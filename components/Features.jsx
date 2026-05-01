@@ -20,9 +20,9 @@ export default function Features({ items }) {
   };
 
   const cardShapes = {
-    1: 'max-w-[520px] min-h-[320px] sm:max-w-[580px] sm:min-h-[360px] rounded-none',
-    2: 'aspect-square max-w-[420px] sm:max-w-[480px] min-h-0 rounded-full',
-    3: 'max-w-[440px] min-h-[300px] sm:min-h-[340px] rounded-[1.2rem]',
+    1: 'max-w-[352px] min-h-[240px] sm:max-w-[580px] sm:min-h-[360px] rounded-none',
+    2: 'aspect-square max-w-[336px] sm:max-w-[480px] min-h-0 rounded-full',
+    3: 'max-w-[352px] min-h-[240px] sm:max-w-[440px] sm:min-h-[340px] rounded-[1.2rem]',
   };
 
   const pastelColors = ['text-rose-300', 'text-fuchsia-300', 'text-violet-300', 'text-sky-300', 'text-emerald-300', 'text-lime-300', 'text-amber-300', 'text-cyan-300'];
@@ -58,7 +58,7 @@ export default function Features({ items }) {
 
   const highlightTitleWords = (title) => {
     const gradientClasses = {
-      'тусовки': 'from-violet-500 via-fuchsia-500 to-violet-400',
+      'тусовки': 'from-pink-400 via-fuchsia-500 to-rose-500',
       'тренде': 'from-sky-300 via-cyan-300 to-blue-400',
       'Топовая': 'from-sky-300 via-cyan-300 to-blue-400',
     };
@@ -101,7 +101,7 @@ export default function Features({ items }) {
           <img
             src="/Манул_Топ.webp"
             alt="Манул"
-            className="h-[280px] w-[200px] object-contain absolute -left-[8px] top-[80px] max-[420px]:-left-[8px] max-[420px]:top-[43px] max-[390px]:-left-[8px] max-[390px]:top-[42px] max-[360px]:-left-[56px] max-[360px]:top-[40px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
+            className="h-[280px] w-[200px] object-contain absolute -left-[11px] top-[80px] max-[430px]:-left-[11px] max-[420px]:top-[46px] max-[390px]:-left-[6px] max-[390px]:top-[10px] max-[360px]:-left-[3px] max-[360px]:top-[4px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
           />
         </div>
 
