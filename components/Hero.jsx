@@ -57,7 +57,7 @@ export default function Hero({ data }) {
                 aria-hidden="true"
               />
             </div>
-            <div className="absolute -left-8 top-[-36%] z-0 pointer-events-none sm:-left-14 sm:top-[-32%] opsacity-90">
+            <div className="absolute -left-8 top-[-50%] z-0 pointer-events-none sm:-left-14 sm:top-[-32%] opsacity-90">
               <img
                 src="/hero-sticker.webp"
                 alt=""

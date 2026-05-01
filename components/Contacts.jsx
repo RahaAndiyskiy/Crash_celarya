@@ -21,22 +21,28 @@ export default function Contacts({ data }) {
         <p className="mt-3 text-sm text-secondary">Здесь будет карта, чтобы найти нас быстро.</p>
       </div>
       <div className="mx-auto w-full max-w-6xl">
-        <div className="mb-6 rounded-2xl bg-white p-4 shadow-[0_0_45px_rgba(139,92,246,0.18),0_0_24px_rgba(236,72,153,0.16),0_0_10px_rgba(56,189,248,0.2)] ring-1 ring-white">
-          <div className="flex flex-wrap justify-center gap-1">
-            <a href="/socials" aria-label="Instagram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-instagram-50.svg" alt="Instagram" className="h-8 w-8" />
+        <div className="mb-6 rounded-2xl bg-white p-2 shadow-[0_0_45px_rgba(139,92,246,0.18),0_0_24px_rgba(236,72,153,0.16),0_0_10px_rgba(56,189,248,0.2)] ring-1 ring-white">
+          <div className="flex flex-wrap justify-center gap-1.5">
+            <a href="/socials" aria-label="Instagram" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+              <img src="/Icons SVG/icons8-instagram-100.svg" alt="Instagram" className="h-6 w-6" />
             </a>
-            <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" aria-label="Telegram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-telegram-app-50.svg" alt="Telegram" className="h-8 w-8" />
+            <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" aria-label="Telegram" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+              <img src="/Icons SVG/icons8-telegram-app-100.svg" alt="Telegram" className="h-6 w-6" />
             </a>
-            <a href="/socials" aria-label="VK" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-vk-circled-50.svg" alt="VK" className="h-8 w-8" />
+            <a href="/socials" aria-label="VK" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+              <img src="/Icons SVG/icons8-vk-com-100.svg" alt="VK" className="h-6 w-6" />
             </a>
-            <a href="/socials" aria-label="TikTok" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-тикток-50.svg" alt="TikTok" className="h-8 w-8" />
+            <a href="/socials" aria-label="TikTok" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+              <img src="/Icons SVG/icons8-tiktok-100.svg" alt="TikTok" className="h-6 w-6" />
             </a>
-            <a href="/socials" aria-label="Likee" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-likee-50.svg" alt="Likee" className="h-8 w-8" />
+            <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+              <img src="/Icons SVG/icons8-youtube-100.svg" alt="YouTube" className="h-6 w-6" />
+            </a>
+            <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer" aria-label="Pinterest" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+              <img src="/Icons SVG/icons8-pinterest-100.svg" alt="Pinterest" className="h-6 w-6" />
+            </a>
+            <a href="/socials" aria-label="Likee" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+              <img src="/Icons SVG/icons8-likee-50.svg" alt="Likee" className="h-6 w-6" />
             </a>
           </div>
         </div>
