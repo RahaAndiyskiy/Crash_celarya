@@ -34,37 +34,32 @@ export const products = [
   {
     id: 2,
     name: 'Выбор манула',
-    price: '799 ₽',
     image: '/Cards/Выбор Манула.webp',
   },
   {
     id: 3,
     name: 'Топ для школы',
-    price: '1099 ₽',
     image: '/Cards/Топ для школы.webp',
   },
   {
     id: 4,
     name: 'Мерч блогеров',
-    price: '349 ₽',
     image: '/Cards/Мерч.webp',
   },
   {
     id: 5,
     name: 'Вкусняшки',
-    price: '299 ₽',
     image: '/Cards/Вкусняшки.webp',
   },
   {
     id: 6,
     name: 'Игрушки',
-    price: '399 ₽',
     image: '/Cards/Игрушки.webp',
   },
 ];
 
 export const contacts = {
-  location: 'Москва, ул. Цветочная 15',
-  hours: 'Пн–Вс 10:00–20:00',
+  location: 'Москва, Скоро открытие',
+  hours: 'Пн–Вс 09:00–21:00',
   button: 'Написать нам',
 };

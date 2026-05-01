@@ -93,7 +93,28 @@ export default function Features({ items }) {
   };
 
   return (
-  <section className="space-y-8 pt-8 pb-8 px-4 sm:px-6  sm:pb-10 lg:pb-12 bg-gradient-to-b from-[#FFF7EB] to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
+  <section className="space-y-8 pt-12 pb-8 px-4 sm:px-6  sm:pb-10 lg:pb-12 bg-gradient-to-b from-[#FFF7EB] to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
+    <div className="mx-auto w-full max-w-6xl">
+      <div className="mb-6 rounded-2xl bg-white p-4 shadow-[0_0_45px_rgba(139,92,246,0.18),0_0_24px_rgba(236,72,153,0.16),0_0_10px_rgba(56,189,248,0.2)] ring-1 ring-white">
+        <div className="flex flex-wrap justify-center gap-3">
+          <a href="#" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-instagram-50.svg" alt="Instagram" className="h-10 w-10" />
+          </a>
+          <a href="#" aria-label="Telegram" className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-telegram-app-50.svg" alt="Telegram" className="h-10 w-10" />
+          </a>
+          <a href="#" aria-label="VK" className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-vk-circled-50.svg" alt="VK" className="h-10 w-10" />
+          </a>
+          <a href="#" aria-label="TikTok" className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-тикток-50.svg" alt="TikTok" className="h-10 w-10" />
+          </a>
+          <a href="#" aria-label="Likee" className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-likee-50.svg" alt="Likee" className="h-8 w-8" />
+          </a>
+        </div>
+      </div>
+    </div>
     <div className="mx-auto w-full max-w-6xl">
       <div className="flex flex-row flex-nowrap items-center overflow-hidden gap-8 ">
         

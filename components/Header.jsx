@@ -41,14 +41,6 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        <div className="absolute left-[55%] top-full z-0 -translate-x-[40%] -translate-y-1/2 pointer-events-none h-[84px] w-auto opacity-95 sm:left-[60%] sm:h-[110px]">
-          <img
-            src="/newitem-sticker-button.webp"
-            alt=""
-            className="h-full w-auto rotate-10"
-            aria-hidden="true"
-          />
-        </div>
       </header>
       <img src="/Manul_02.webp" alt="" aria-hidden="true" className="sr-only" />
 
@@ -59,33 +51,33 @@ export default function Header() {
               type="button"
               aria-label="Закрыть меню"
               onClick={() => setMenuOpen(false)}
-              className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-none border-[12px] border-white bg-[#A78BFA] text-xl text-white shadow-[0_14px_10px_-8px_rgba(0,0,0,0.72)] transition duration-300 ease-out hover:bg-[#9774f0]"
+              className="absolute left-1/2 top-[-44px] inline-flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-none border-[12px] border-white bg-[#A78BFA] text-xl text-white shadow-[0_14px_10px_-8px_rgba(0,0,0,0.72)] transition duration-300 ease-out hover:bg-[#9774f0] max-[375px]:left-[50%] max-[375px]:top-[76px] max-[375px]:-translate-x-1/2 max-[414px]:left-1/2 max-[414px]:top-[-20px] max-[414px]:-translate-x-1/2 max-[430px]:left-1/2 max-[430px]:top-[-20px] max-[430px]:-translate-x-1/2"
             >
               ✕
             </button>
 
-            <div className="space-y-5 pt-4">
+            <div className="space-y-4 pt-3">
               <a
                 href="#products"
                 onClick={() => setMenuOpen(false)}
-                className="block rounded-[1.2rem] border-[12px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-6 py-5 text-lg font-semibold text-primary shadow-[0_10px_0_rgba(0,0,0,0.78)] transform-gpu transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0 rotate-[2deg]"
+                className="relative -top-[7px] mx-auto block rounded-[1.2rem] border-[12px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-6 py-5 text-lg font-semibold text-primary shadow-[0_10px_0_rgba(0,0,0,0.78)] transform-gpu transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0 rotate-[2deg] max-[375px]:top-[90px] max-[414px]:top-[54px] max-[430px]:top-[54px]"
               >
                 Хиты
               </a>
               <a
                 href="#contacts"
                 onClick={() => setMenuOpen(false)}
-                className="block rounded-[1.2rem] border-[12px] border-white bg-gradient-to-br from-rose-200 via-rose-300 to-rose-100 px-6 py-5 text-lg font-semibold text-primary shadow-[0_10px_0_rgba(0,0,0,0.78)] transform-gpu transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0 rotate-[1deg]"
+                className="relative -top-[70px] mx-auto block rounded-[1.2rem] border-[12px] border-white bg-gradient-to-br from-rose-200 via-rose-300 to-rose-100 px-6 py-5 text-lg font-semibold text-primary shadow-[0_10px_0_rgba(0,0,0,0.78)] transform-gpu transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0 rotate-[1deg] max-[375px]:top-[100px] max-[414px]:top-[68px] max-[430px]:top-[68px]"
               >
                 Контакты
               </a>
             </div>
 
-            <div className="mt-10 flex justify-center">
+            <div className="mt-6 flex justify-center">
               <img
                 src="/Manul_02.webp"
                 alt="Манул"
-                className="h-[21rem] w-auto object-contain drop-shadow-[0_10px_0_rgba(0,0,0,0.78)]"
+                className="relative left-[-3px] top-[76px] h-[21rem] w-auto object-contain drop-shadow-[0_10px_0_rgba(0,0,0,0.78)] translate-y-[56px] max-[375px]:top-[-23px] max-[375px]:translate-y-0"
               />
             </div>
 
