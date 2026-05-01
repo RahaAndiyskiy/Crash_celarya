@@ -22,7 +22,7 @@ export default function Contacts({ data }) {
       </div>
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-6 rounded-2xl bg-white p-4 shadow-[0_0_45px_rgba(139,92,246,0.18),0_0_24px_rgba(236,72,153,0.16),0_0_10px_rgba(56,189,248,0.2)] ring-1 ring-white">
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-1">
             <a href="/socials" aria-label="Instagram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
               <img src="/Icons SVG/icons8-instagram-50.svg" alt="Instagram" className="h-8 w-8" />
             </a>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оффлайн</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(180deg, #fdf4ff 0%, #f8f1ff 48%, #fffaf0 100%);
+        color: #1f2937;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      .card {
+        width: 100%;
+        max-width: 420px;
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 30px;
+        box-shadow: 0 30px 80px rgba(15, 23, 42, 0.14);
+        padding: 28px;
+        text-align: center;
+      }
+      .card img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 24px;
+        display: block;
+      }
+      h1 {
+        margin: 0 0 14px;
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        line-height: 1.05;
+      }
+      p {
+        margin: 0;
+        color: #475569;
+        line-height: 1.7;
+      }
+      .hint {
+        margin-top: 18px;
+        font-size: 0.95rem;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="/404.webp" alt="Манул оффлайн" />
+      <h1>Нет соединения</h1>
+      <p>Страница недоступна, потому что интернет отключён. Подождите восстановление сети и обновите страницу.</p>
+      <p class="hint">Эта страница работает офлайн без React и загружается локально.</p>
+    </div>
+  </body>
+</html>
