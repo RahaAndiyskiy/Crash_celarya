@@ -8,7 +8,7 @@ export default function Contacts({ data }) {
           <p>{data.location}</p>
           <p>{data.hours}</p>
         </div>
-        <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-2xl border-[12px] border-white bg-gradient-to-br from-violet-200 via-fuchsia-200 to-violet-100 px-6 py-3 text-sm font-semibold text-primary shadow-[0_0_30px_rgba(139,92,246,0.4)] transform transition duration-200 hover:-translate-y-0.5 rotate-[7deg]">
+        <a href="https://web.telegram.org/a/#683846671" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-2xl border-[12px] border-white bg-gradient-to-br from-violet-200 via-fuchsia-200 to-violet-100 px-6 py-3 text-sm font-semibold text-primary shadow-[0_0_30px_rgba(139,92,246,0.4)] transform transition duration-200 hover:-translate-y-0.5 rotate-[7deg]">
           {data.button}
         </a>
       </div>
@@ -22,7 +22,7 @@ export default function Contacts({ data }) {
       </div>
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-6 rounded-2xl bg-white p-2 shadow-[0_0_45px_rgba(139,92,246,0.18),0_0_24px_rgba(236,72,153,0.16),0_0_10px_rgba(56,189,248,0.2)] ring-1 ring-white">
-          <div className="flex flex-wrap justify-center gap-1.5 max-[390px]:gap-2 max-[375px]:gap-2">
+          <div className="flex flex-wrap justify-center gap-1.5 max-[390px]:gap-0.1 max-[375px]:gap-0.1">
             <a href="/socials" aria-label="Instagram" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
               <img src="/Icons SVG/icons8-instagram-100.svg" alt="Instagram" className="h-6 w-6" />
             </a>
@@ -47,7 +47,7 @@ export default function Contacts({ data }) {
           </div>
         </div>
       </div>
-      <img src="/Мороженое.webp" alt="Мороженое" className="pointer-events-none absolute right-6 top-[calc(50%+25px)] h-auto max-w-[220px] -translate-y-1/2 z-20" />
+      <img src="/Мороженое.webp" alt="Мороженое" className="pointer-events-none absolute right-6 top-[calc(50%+40px)] h-auto max-w-[220px] -translate-y-1/2 z-20" />
     </section>
   );
 }
