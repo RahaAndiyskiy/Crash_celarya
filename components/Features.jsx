@@ -1,4 +1,8 @@
-import { FiHeart, FiStar, FiZap } from 'react-icons/fi';
+'use client';
+
+import React from 'react';
+import { useEffect, useState } from 'react';
+import { FiHeart, FiStar, FiZap, FiArrowUp } from 'react-icons/fi';
 import { FaGlasses } from 'react-icons/fa';
 import { IoSparkles } from 'react-icons/io5';
 
@@ -44,6 +48,14 @@ export default function Features({ items }) {
     ],
   };
 
+  const [showTopButton, setShowTopButton] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowTopButton(window.scrollY > 320);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   const highlightTitleWords = (title) => {
     const gradientClasses = {
       'тусовки': 'from-violet-500 via-fuchsia-500 to-violet-400',
@@ -81,7 +93,7 @@ export default function Features({ items }) {
   };
 
   return (
-  <section className="space-y-8 pt-8 pb-8 px-4 sm:px-6  sm:pb-10 lg:pb-12 bg-gradient-to-b from-white to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
+  <section className="space-y-8 pt-8 pb-8 px-4 sm:px-6  sm:pb-10 lg:pb-12 bg-gradient-to-b from-[#FFF7EB] to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
     <div className="mx-auto w-full max-w-6xl">
       <div className="flex flex-row flex-nowrap items-center overflow-hidden gap-8 ">
         
@@ -89,7 +101,7 @@ export default function Features({ items }) {
           <img
             src="/Манул_Топ.webp"
             alt="Манул"
-            className="h-[280px] w-[200px] object-contain absolute -left-[8px] top-[80px] max-[420px]:-left-[48px] max-[420px]:top-[43px] max-[390px]:-left-[8px] max-[390px]:top-[42px] max-[360px]:-left-[56px] max-[360px]:top-[40px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
+            className="h-[280px] w-[200px] object-contain absolute -left-[8px] top-[80px] max-[420px]:-left-[8px] max-[420px]:top-[43px] max-[390px]:-left-[8px] max-[390px]:top-[42px] max-[360px]:-left-[56px] max-[360px]:top-[40px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
           />
         </div>
 
@@ -120,55 +132,67 @@ export default function Features({ items }) {
     </div>
 
       {items?.length ? (
-        <div className="relative grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {items.slice(0, 4).map((item) => (
-            <article
-              key={item.id}
-              className={`relative mx-auto overflow-hidden border-[12px] border-white ${cardShapes[item.id] ?? 'max-w-[420px] min-h-[280px] sm:min-h-[320px] rounded-[1.2rem]'} ${cardBackgrounds[item.id] ?? 'bg-slate-100'} ${cardTransforms[item.id] ?? ''} transform-gpu shadow-[10px_10px_0_rgba(0,0,0,0.78)] transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0`}
-            >
-              <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-                {(cardDecorations[item.id] ?? []).map((dec, index) => {
-                  const Icon = dec.icon;
-                  const seed = seedFor(item.id, index);
-                  const colorClass = dec.colorOverride ?? seededOption(pastelColors, seed + 1);
-                  const sizeClass = dec.sizeOverride ?? seededOption(iconSizes, seed + 2);
-                  const rotateClass = dec.rotateOverride ?? seededOption(iconRotations, seed + 3);
-                  return (
-                    <span
-                      key={index}
-                      className={`absolute ${dec.position} ${sizeClass} ${rotateClass} ${colorClass} opacity-80`}
-                    >
-                      <Icon className="h-full w-full" />
-                    </span>
-                  );
-                })}
-              </div>
-              <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 py-8 text-center">
-                <h3 className="text-[clamp(1.6rem,4vw,2.4rem)] font-nunito font-semibold text-primary tracking-[-0.03em]">
-                {highlightTitleWords(item.title).map((part, index) =>
-                  typeof part === 'string' ? (
-                    <span key={index} className="block">
-                      {part}
-                    </span>
-                  ) : (
-                    <span key={index} className="block">
-                      {part}
-                    </span>
-                  )
-                )}
-              </h3>
-                <p className="mt-4 text-[clamp(0.95rem,2.4vw,1rem)] text-secondary leading-7">
-                  {item.description}
-                </p>
-              </div>
-            </article>
-          ))}
+        <div className="relative">
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {items.slice(0, 4).map((item) => (
+              <article
+                key={item.id}
+                className={`relative mx-auto overflow-hidden border-[12px] border-white ${cardShapes[item.id] ?? 'max-w-[420px] min-h-[280px] sm:min-h-[320px] rounded-[1.2rem]'} ${cardBackgrounds[item.id] ?? 'bg-slate-100'} ${cardTransforms[item.id] ?? ''} transform-gpu shadow-[10px_10px_0_rgba(0,0,0,0.78)] transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0`}
+              >
+                <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+                  {(cardDecorations[item.id] ?? []).map((dec, index) => {
+                    const Icon = dec.icon;
+                    const seed = seedFor(item.id, index);
+                    const colorClass = dec.colorOverride ?? seededOption(pastelColors, seed + 1);
+                    const sizeClass = dec.sizeOverride ?? seededOption(iconSizes, seed + 2);
+                    const rotateClass = dec.rotateOverride ?? seededOption(iconRotations, seed + 3);
+                    return (
+                      <span
+                        key={index}
+                        className={`absolute ${dec.position} ${sizeClass} ${rotateClass} ${colorClass} opacity-80`}
+                      >
+                        <Icon className="h-full w-full" />
+                      </span>
+                    );
+                  })}
+                </div>
+                <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 py-8 text-center">
+                  <h3 className="text-[clamp(1.6rem,4vw,2.4rem)] font-nunito font-semibold text-primary tracking-[-0.03em]">
+                  {highlightTitleWords(item.title).map((part, index) =>
+                    typeof part === 'string' ? (
+                      <span key={index} className="block">
+                        {part}
+                      </span>
+                    ) : (
+                      <span key={index} className="block">
+                        {part}
+                      </span>
+                    )
+                  )}
+                </h3>
+                  <p className="mt-4 text-[clamp(0.95rem,2.4vw,1rem)] text-secondary leading-7">
+                    {item.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       ) : (
         <div className="rounded-[2rem] bg-white/90 p-8 text-center text-sm text-secondary ring-1 ring-slate-200/70 shadow-[0_25px_60px_-35px_rgba(15,23,42,0.16)]">
           Пока нет данных для карточек.
         </div>
       )}
-    </section>
+        {showTopButton ? (
+          <button
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="fixed right-4 bottom-4 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full border-4 border-white bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 text-white shadow-[5px_5px_0_rgba(0,0,0,0.78)] transition-transform duration-200 hover:-translate-y-1"
+            aria-label="Наверх"
+          >
+            <FiArrowUp className="h-6 w-6" />
+          </button>
+        ) : null}
+      </section>
   );
 }

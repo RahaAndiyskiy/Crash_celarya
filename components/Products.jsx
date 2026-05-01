@@ -61,7 +61,7 @@ export default function Products({ items }) {
   };
 
   return (
-    <section id="products" className="space-y-6 mt-24">
+    <section id="products" className="relative space-y-6 mt-24">
       <div className="flex flex-row flex-nowrap items-start justify-between gap-6 overflow-hidden">
         <div className="min-w-[220px] max-w-[420px] space-y-5">
           <img src="/Люблю школу.webp" alt="Люблю школу" className="relative left-[43px] top-[31px] h-24 w-auto object-contain sm:h-[7.5rem] -rotate-[10deg]" />

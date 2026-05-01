@@ -27,39 +27,39 @@ export const features = [
 export const products = [
   {
     id: 1,
-    name: 'Неоновый набор ручек',
+    name: 'Новинки недели',
     price: '499 ₽',
-    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80',
+    image: '/Cards/Новинки.webp',
   },
   {
     id: 2,
-    name: 'Футляр для карандашей',
+    name: 'Выбор манула',
     price: '799 ₽',
-    image: 'https://images.unsplash.com/photo-1518977956818-0c27a5f4f4c3?auto=format&fit=crop&w=800&q=80',
+    image: '/Cards/Выбор Манула.webp',
   },
   {
     id: 3,
-    name: 'Планнер с цветами',
+    name: 'Топ для школы',
     price: '1099 ₽',
-    image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80',
+    image: '/Cards/Топ для школы.webp',
   },
   {
     id: 4,
-    name: 'Мини-мягкая игрушка',
+    name: 'Мерч блогеров',
     price: '349 ₽',
-    image: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80',
+    image: '/Cards/Мерч.webp',
   },
   {
     id: 5,
-    name: 'Набор стикеров',
+    name: 'Вкусняшки',
     price: '299 ₽',
-    image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=80',
+    image: '/Cards/Вкусняшки.webp',
   },
   {
     id: 6,
-    name: 'Яркий блокнот',
+    name: 'Игрушки',
     price: '399 ₽',
-    image: 'https://images.unsplash.com/photo-1496317556649-f930d733eea2?auto=format&fit=crop&w=800&q=80',
+    image: '/Cards/Игрушки.webp',
   },
 ];
 
