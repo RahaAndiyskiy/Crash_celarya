@@ -12,11 +12,11 @@ export default function Features({ items }) {
   const cardTransforms = {
     1: 'rotate-[3deg]',
     2: '-rotate-[2.5deg]',
-    3: 'rotate-[1.8deg]',
+    3: '-rotate-[1.2deg]',
   };
 
   const cardShapes = {
-    1: 'max-w-[520px] min-h-[320px] sm:max-w-[580px] sm:min-h-[360px] rounded-[1.2rem]',
+    1: 'max-w-[520px] min-h-[320px] sm:max-w-[580px] sm:min-h-[360px] rounded-none',
     2: 'aspect-square max-w-[420px] sm:max-w-[480px] min-h-0 rounded-full',
     3: 'max-w-[440px] min-h-[300px] sm:min-h-[340px] rounded-[1.2rem]',
   };
@@ -83,22 +83,22 @@ export default function Features({ items }) {
   return (
   <section className="space-y-8 pt-8 pb-8 px-4 sm:px-6  sm:pb-10 lg:pb-12 bg-gradient-to-b from-white to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
     <div className="mx-auto w-full max-w-6xl">
-      <div className="flex flex-row flex-nowrap items-center overflow-visible gap-8">
+      <div className="flex flex-row flex-nowrap items-center overflow-hidden gap-8 ">
         
         <div className="flex-shrink-0 w-[140px] relative">
           <img
             src="/Манул_Топ.webp"
             alt="Манул"
-            className="h-[320px] w-[220px] object-contain absolute -left-[35px] top-[45px] max-[420px]:-left-[48px] max-[420px]:top-[43px] max-[390px]:-left-[52px] max-[390px]:top-[42px] max-[360px]:-left-[56px] max-[360px]:top-[40px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
+            className="h-[280px] w-[200px] object-contain absolute -left-[8px] top-[80px] max-[420px]:-left-[48px] max-[420px]:top-[43px] max-[390px]:-left-[8px] max-[390px]:top-[42px] max-[360px]:-left-[56px] max-[360px]:top-[40px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
           />
         </div>
 
         <div className="flex-1 min-w-0 w-full space-y-4 text-left">
-          <p
-            className="self-start inline-flex rounded-none border-[5px] border-white bg-gradient-to-br from-sky-200 via-cyan-200 to-sky-100 px-5 py-1 font-black uppercase tracking-[0.2em] text-primary shadow-[6px_6px_0_rgba(0,0,0,0.6)] sm:text-[1.1rem] [@media(max-width:390px)]:text-[10px]"
-          >
-            НАШ ВАЙБ
-          </p>
+          <img
+                src="/Наш вайб.webp"
+                alt="Наш Вайб"
+                className="w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] h-auto rotate-[-10deg]"
+          />
 
           <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary text-left sm:text-3xl [@media(max-width:390px)]:text-[20px]">
             Это не просто магазин.
