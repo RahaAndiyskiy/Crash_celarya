@@ -108,7 +108,7 @@ export default function Hero({ data }) {
               </div>
               <div className="relative flex flex-col gap-3 z-10">
                 <a href="#contacts" className="hero-button-primary w-full rounded-xl bg-[#A78BFA] px-4 py-2.5 text-base font-semibold text-white transition-colors hover:bg-[#9774f0]">
-                  В магазин
+                  Контакты
                 </a>
                 <a href="#products" className="catalog-button w-full rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-base font-semibold text-primary">
                   <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-100 text-base">
