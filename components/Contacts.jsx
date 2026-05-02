@@ -10,7 +10,7 @@ export default function Contacts({ data }) {
           className="mx-auto w-[260px] sm:w-[300px] h-auto"
         />
 
-        <div className="space-y-2">
+        <div className="space-y-1">
           <p className="text-xl font-semibold text-slate-900">
             Залетай на тусу или звони
           </p>
@@ -18,12 +18,22 @@ export default function Contacts({ data }) {
           <p className="text-slate-500">{data.hours}</p>
         </div>
 
-        <div className="mx-auto w-fit relative -top-6 mb-16 z-10">
+        <div className="mx-auto w-fit">
           <a
             href="https://t.me/NatashaTishman"
             target="_blank"
             rel="noreferrer"
-            className="block w-fit rotate-[-6deg] rounded-2xl border-4 border-white bg-gradient-to-br from-purple-200 to-pink-200 px-4 py-3 font-semibold shadow-xl text-center"
+            className="block w-fit -translate-y-6 
+            sm:translate-y-16 
+            rotate-[-6deg] 
+            rounded-2xl 
+            bg-gradient-to-br from-pink-400 to-purple-500 
+            px-6 py-3 
+            border-4 border-white
+            text-sm font-semibold text-white 
+            shadow-[0_2px_0_rgba(0,0,0,0.6)]
+            transition hover:rotate-0 hover:shadow-xl"
+          
             aria-label="Написать нам"
           >
             {data.button}
@@ -31,7 +41,7 @@ export default function Contacts({ data }) {
         </div>
 
         {/* КАРТА — база */}
-        <div className="relative mt-10">
+        <div className="relative pt-10">
           <div className="rounded-3xl border bg-white p-4 shadow-2xl shadow-purple-500/50 ring-2 ring-purple-200/60">
             <div className="h-[220px] rounded-2xl bg-slate-200 flex items-center justify-center">
               <div className="h-3 w-3 rounded-full bg-pink-500"></div>
@@ -46,7 +56,12 @@ export default function Contacts({ data }) {
             src="/optimized/Мороженое.webp"
             alt="Мороженое"
             loading="lazy"
-            className="pointer-events-none absolute left-1/2 -translate-x-1/2 -top-[110px] w-[150px] sm:w-[180px]"
+            className="pointer-events-none
+            absolute left-1/2 
+            -translate-x-1/2 
+            -top-[110px]
+            w-[220px] sm:w-[180px]
+            z-10 "
           />
         </div>
 
