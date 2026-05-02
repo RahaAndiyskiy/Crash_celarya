@@ -42,7 +42,7 @@ export default function Contacts({ data }) {
 
         {/* КАРТА — база */}
         <div className="relative pt-10">
-          <div className="rounded-3xl border bg-white p-4 shadow-2xl shadow-purple-500/50 ring-2 ring-purple-200/60">
+          <div className="rounded-3xl border bg-white p-4 shadow-2xl shadow-purple-500/50 ring-2 ring-purple-200/60 ring-1 ring-white ring-inset">
             <div className="h-[220px] rounded-2xl bg-slate-200 flex items-center justify-center">
               <div className="h-3 w-3 rounded-full bg-pink-500"></div>
             </div>
