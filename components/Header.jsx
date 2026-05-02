@@ -7,15 +7,9 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 mx-auto flex w-full max-w-3xl flex-col gap-2 rounded-2xl bg-white p-2 shadow-[0_0_45px_rgba(139,92,246,0.5),0_0_24px_rgba(236,72,153,0.5),0_0_10px_rgba(56,189,248,0.7)] ring-1 ring-white md:flex-row md:items-center md:justify-between">
-        <div className="flex w-full items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <img src="/optimized/Logo_new.webp" alt="Крашцелярия" loading="eager" className="h-18 w-auto max-w-[200px] object-contain sm:h-22 sm:max-w-[160px]" />
-            <nav className="hidden gap-4 text-sm text-secondary md:flex">
-              <a href="#products" className="hover:text-primary">Хиты</a>
-              <a href="#contacts" className="hover:text-primary">Контакты</a>
-            </nav>
-          </div>
+      <header className="fixed inset-x-0 top-0 z-50 mx-auto flex w-full max-w-3xl md:max-w-[80rem] flex-col gap-2 rounded-2xl bg-white p-2 shadow-[0_0_45px_rgba(139,92,246,0.5),0_0_24px_rgba(236,72,153,0.5),0_0_10px_rgba(56,189,248,0.7)] ring-1 ring-white md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:gap-2">
+        <div className="flex w-full items-center justify-between gap-2 md:justify-start">
+          <img src="/optimized/Logo_new.webp" alt="Крашцелярия" loading="eager" className="h-18 w-auto max-w-[200px] object-contain sm:h-22 sm:max-w-[160px]" />
           <button
             type="button"
             aria-label="Открыть меню"
@@ -30,30 +24,12 @@ export default function Header() {
           </button>
         </div>
 
-        <div className="flex w-full flex-wrap justify-center gap-2 md:justify-end">
-          <div className="flex flex-wrap justify-center gap-2 md:hidden">
-            <a href="/socials" aria-label="Instagram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-instagram-100.svg" alt="Instagram" className="h-8 w-8" />
-            </a>
-            <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" aria-label="Telegram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-telegram-app-100.svg" alt="Telegram" className="h-8 w-8" />
-            </a>
-            <a href="/socials" aria-label="VK" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-vk-com-100.svg" alt="VK" className="h-8 w-8" />
-            </a>
-            <a href="/socials" aria-label="TikTok" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-tiktok-100.svg" alt="TikTok" className="h-8 w-8" />
-            </a>
-            <a href="/socials" aria-label="YouTube" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-youtube-100.svg" alt="YouTube" className="h-8 w-8" />
-            </a>
-            <a href="/socials" aria-label="Pinterest" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-pinterest-100.svg" alt="Pinterest" className="h-8 w-8" />
-            </a>
-            <a href="/socials" aria-label="Likee" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-likee-50.svg" alt="Likee" className="h-8 w-8" />
-            </a>
-          </div>
+        <nav className="hidden justify-center gap-4 text-sm text-secondary md:flex">
+          <a href="#products" className="hover:text-primary">Хиты</a>
+          <a href="#contacts" className="hover:text-primary">Контакты</a>
+        </nav>
+
+        <div className="flex w-full items-center justify-end gap-2">
           <div className="hidden flex-wrap justify-end gap-2 md:flex">
             <a href="/socials" aria-label="Instagram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
               <img src="/Icons SVG/icons8-instagram-100.svg" alt="Instagram" className="h-8 w-8" />
@@ -77,6 +53,29 @@ export default function Header() {
               <img src="/Icons SVG/icons8-likee-50.svg" alt="Likee" className="h-8 w-8" />
             </a>
           </div>
+        </div>
+        <div className="flex flex-wrap justify-center gap-2 md:hidden">
+          <a href="/socials" aria-label="Instagram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-instagram-100.svg" alt="Instagram" className="h-8 w-8" />
+          </a>
+          <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" aria-label="Telegram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-telegram-app-100.svg" alt="Telegram" className="h-8 w-8" />
+          </a>
+          <a href="/socials" aria-label="VK" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-vk-com-100.svg" alt="VK" className="h-8 w-8" />
+          </a>
+          <a href="/socials" aria-label="TikTok" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-tiktok-100.svg" alt="TikTok" className="h-8 w-8" />
+          </a>
+          <a href="/socials" aria-label="YouTube" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-youtube-100.svg" alt="YouTube" className="h-8 w-8" />
+          </a>
+          <a href="/socials" aria-label="Pinterest" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-pinterest-100.svg" alt="Pinterest" className="h-8 w-8" />
+          </a>
+          <a href="/socials" aria-label="Likee" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <img src="/Icons SVG/icons8-likee-50.svg" alt="Likee" className="h-8 w-8" />
+          </a>
         </div>
       </header>
       <img src="/optimized/Manul_02.webp" alt="" aria-hidden="true" className="sr-only" />
