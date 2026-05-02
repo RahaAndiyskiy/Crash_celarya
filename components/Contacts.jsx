@@ -1,72 +1,78 @@
-'use client';
-
 export default function Contacts({ data }) {
   return (
-    <section id="contacts" className="relative grid gap-8 p-8 md:grid-cols-[1.1fr_0.9fr]">
-      <div className="relative space-y-5 -top-8 max-[430px]:-top-12 max-[430px]:left-3 max-[375px]:left-4">
+    <section id="contacts" className="relative px-4 pb-24 pt-10 bg-[#F5F3FF] overflow-hidden">
+      <div className="mx-auto max-w-md text-center space-y-6">
+
+        {/* Заголовок (фикс ширины, не прыгает) */}
         <img
           src="/optimized/Контакты.webp"
           alt="Контакты"
-          loading="lazy"
-          className="h-[276px] w-auto max-w-[280px] -rotate-[8deg] transition-opacity duration-500 ease-out"
+          className="mx-auto w-[260px] sm:w-[300px] h-auto"
         />
-        <h2 className="text-2xl font-nunito font-black text-primary text-center sm:text-3xl">Залетай на тусу<br />или звони</h2>
-        <div className="space-y-2 text-secondary text-center font-rubik">
-          <p>{data.location}</p>
-          <p>{data.hours}</p>
+
+        <div className="space-y-2">
+          <p className="text-xl font-semibold text-slate-900">
+            Залетай на тусу или звони
+          </p>
+          <p className="text-slate-500">{data.location}</p>
+          <p className="text-slate-500">{data.hours}</p>
         </div>
-        <a href="https://web.telegram.org/a/#683846671" target="_blank" rel="noreferrer" className="mx-auto inline-flex w-fit items-center justify-center rounded-2xl border-[12px] border-white bg-gradient-to-br from-violet-200 via-fuchsia-200 to-violet-100 px-4 py-3 text-sm font-semibold text-primary shadow-[0_0_30px_rgba(139,92,246,0.4)] transition duration-200 hover:-translate-y-0.5 rotate-[7deg]">
+
+        <a
+          href="https://web.telegram.org/a/#683846671"
+          target="_blank"
+          rel="noreferrer"
+          className="mx-auto block w-fit rotate-[-6deg] rounded-2xl bg-gradient-to-br from-purple-200 to-pink-200 px-4 py-3 mb-[30px] font-semibold shadow-xl text-center"
+          aria-label="Написать нам"
+        >
           {data.button}
         </a>
-      </div>
-      <div className="product-card mt-16 rounded-2xl bg-white p-3 shadow-[0_0_45px_rgba(139,92,246,0.18),0_0_24px_rgba(236,72,153,0.16),0_0_10px_rgba(56,189,248,0.2)] transform transition-transform duration-300 hover:scale-[1.02] z-10">
-        <div className="overflow-hidden rounded-2xl p-[4px] bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 shadow-[0_0_40px_rgba(236,72,153,0.18),0_0_20px_rgba(139,92,246,0.15),0_0_8px_rgba(56,189,248,0.2)]">
-          <div className="relative h-48 rounded-xl bg-slate-200">
-            <span className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-pink-500 shadow-[0_0_16px_rgba(236,72,153,0.35)]" />
+
+        {/* КАРТА — база */}
+        <div className="relative mt-10">
+          <div className="rounded-3xl border bg-white p-4 shadow-xl">
+            <div className="h-[220px] rounded-2xl bg-slate-200 flex items-center justify-center">
+              <div className="h-3 w-3 rounded-full bg-pink-500"></div>
+            </div>
+            <p className="mt-3 text-sm text-slate-500 text-left">
+              Здесь будет карта, чтобы найти нас быстро.
+            </p>
           </div>
+
+          {/* МАНУЛ С МОРОЖЕНЫМ — ПРИВЯЗАН К КАРТЕ */}
+          <img
+            src="/optimized/Мороженое.webp"
+            alt="Мороженое"
+            loading="lazy"
+            className="pointer-events-none absolute left-1/2 -translate-x-1/2 -top-[110px] w-[150px] sm:w-[180px]"
+          />
         </div>
-        <p className="mt-3 text-sm text-secondary">Здесь будет карта, чтобы найти нас быстро.</p>
-      </div>
-      <div className="mx-auto w-full max-w-6xl">
-        <div className="mb-6 rounded-2xl bg-white p-2 shadow-[0_0_45px_rgba(139,92,246,0.18),0_0_24px_rgba(236,72,153,0.16),0_0_10px_rgba(56,189,248,0.2)] ring-1 ring-white">
-          <div className="flex flex-wrap justify-center gap-1.5 max-[390px]:gap-0.1 max-[375px]:gap-0.1">
-            <a href="/socials" aria-label="Instagram" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-instagram-100.svg" alt="Instagram" className="h-6 w-6" />
-            </a>
-            <a href="/socials" aria-label="Telegram" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-telegram-app-100.svg" alt="Telegram" className="h-6 w-6" />
-            </a>
-            <a href="/socials" aria-label="VK" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-vk-com-100.svg" alt="VK" className="h-6 w-6" />
-            </a>
-            <a href="/socials" aria-label="TikTok" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-tiktok-100.svg" alt="TikTok" className="h-6 w-6" />
-            </a>
-            <a href="/socials" aria-label="YouTube" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-youtube-100.svg" alt="YouTube" className="h-6 w-6" />
-            </a>
-            <a href="/socials" aria-label="Pinterest" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-pinterest-100.svg" alt="Pinterest" className="h-6 w-6" />
-            </a>
-            <a href="/socials" aria-label="Likee" className="inline-flex h-6 w-6 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
-              <img src="/Icons SVG/icons8-likee-50.svg" alt="Likee" className="h-6 w-6" />
-            </a>
-          </div>
+
+        {/* Соцсети */}
+        <div className="flex flex-wrap justify-center gap-3 pt-6">
+          <a href="/socials" aria-label="Instagram" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
+            <img src="/Icons SVG/icons8-instagram-100.svg" className="h-5 w-5" />
+          </a>
+          <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" aria-label="Telegram" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
+            <img src="/Icons SVG/icons8-telegram-app-100.svg" className="h-5 w-5" />
+          </a>
+          <a href="/socials" aria-label="VK" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
+            <img src="/Icons SVG/icons8-vk-com-100.svg" className="h-5 w-5" />
+          </a>
+          <a href="/socials" aria-label="TikTok" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
+            <img src="/Icons SVG/icons8-tiktok-100.svg" className="h-5 w-5" />
+          </a>
+          <a href="/socials" aria-label="YouTube" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
+            <img src="/Icons SVG/icons8-youtube-100.svg" className="h-5 w-5" />
+          </a>
+          <a href="/socials" aria-label="Pinterest" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
+            <img src="/Icons SVG/icons8-pinterest-100.svg" className="h-5 w-5" />
+          </a>
+          <a href="/socials" aria-label="Likee" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
+            <img src="/Icons SVG/icons8-likee-50.svg" className="h-5 w-5" />
+          </a>
         </div>
       </div>
-      <img
-        src="/optimized/Мороженое.webp"
-        alt="Мороженое"
-        loading="lazy"
-        className="
-          pointer-events-none absolute right-12 top-0
-          translate-y-[6rem]
-          sm:translate-y-[8rem]
-          max-[430px]:translate-y-[30.5rem]
-          h-[220px] w-auto max-w-[220px]
-          transition-opacity duration-500 ease-out z-20
-        "
-      />
     </section>
   );
 }
