@@ -7,7 +7,13 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-3xl items-center justify-between rounded-b-[28px] rounded-t-none bg-gradient-to-r from-rose-100 via-fuchsia-100 to-yellow-200 px-4 py-3 border-[12px] border-white border-t-0 shadow-[0_6px_0_rgba(0,0,0,0.6)]">
+      <header className="fixed inset-x-0 top-0 z-50 mx-auto flex w-full max-w-3xl 
+      items-center justify-between rounded-b-[28px] rounded-t-none 
+      bg-gradient-to-r from-rose-100 via-fuchsia-100 to-yellow-200 
+      px-4 py-3 border-[12px] 
+      border-white 
+      border-t-0 
+      shadow-[0_6px_0_rgba(0,0,0,0.6)]">
         <div className="flex items-center gap-2">
           <img src="/optimized/Logo_new.webp" alt="Крашцелярия" loading="eager" className="h-18 w-auto max-w-[220px] object-contain sm:h-22 sm:max-w-[160px]" />
         </div>
@@ -32,7 +38,7 @@ export default function Header() {
             type="button"
             aria-label="Открыть меню"
             onClick={() => setMenuOpen(true)}
-            className="hero-icon-button hero-icon-button--purple inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#A78BFA] text-white transition-colors hover:bg-[#9774f0] md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border-4 border-white bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 text-white shadow-[5px_5px_0_rgba(0,0,0,0.78)] transition-transform duration-200 hover:-translate-y-1 md:hidden"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="3" y1="6" x2="21" y2="6" />
