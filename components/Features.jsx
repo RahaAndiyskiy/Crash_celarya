@@ -93,13 +93,18 @@ export default function Features({ items }) {
   };
 
   return (
-  <section className="space-y-8 pt-12 pb-8 px-4 sm:px-6 sm:pb-10 lg:pb-12 bg-gradient-to-b from-[#FFF7EB] to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
+  <section className="space-y-8 pt-12 pb-8 px-4 
+  sm:px-6 sm:pb-10 
+  lg:pb-12 bg-gradient-to-b from-[#FFF7EB] to-[#F5F3FF] 
+  shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
   <div className="mx-auto w-full max-w-6xl">
     
     <div className="flex items-center gap-8 relative">
 
       {/* МАНУЛ */}
-      <div className="relative left-[12px] top-[24px] md:left-auto md:top-auto w-[180px] sm:w-[220px] lg:w-[260px] flex-shrink-0">
+      <div className="relative md:left-[-51px] md:top-[-4px] w-[180px] 
+          sm:w-[220px] 
+          lg:w-[260px] flex-shrink-0">
         <img
           src="/optimized/Манул_Топ.webp"
           alt="Манул"
@@ -120,21 +125,22 @@ export default function Features({ items }) {
               src="/optimized/Наш вайб.webp"
               alt="Наш Вайб"
               loading="lazy"
-              className="relative left-[-67px] top-[-9px] w-auto max-w-[180px] 
+              className="relative left-[-70px] md:left-[-140px] md:top-[-18px] w-auto max-w-[180px] 
               sm:max-w-[220px] 
               sm:h-[170px] 
               md:max-w-[260px] h-[150px] 
               md:h-[190px] 
               rotate-[-10deg] 
-              md:left-[83px] md:top-[-10px] 
               transition-opacity duration-500 ease-out"
         />
 
-        <h2 className="relative left-[-33px] top-[-20px] w-[129px] 
+        {/* h2 alignment: mobile first with desktop overrides */}
+        <h2 className="relative 
+            left-[-35px] 
+            md:left-[-220px] md:top-[2px] w-[129px] md:text-2xl 
             text-[17px] font-nunito font-extrabold leading-tight 
             text-primary text-center 
-            sm:text-3xl md:left-[36px] 
-            md:top-[-38px] md:w-[428px] [@media(max-width:390px)]:text-[20px]">
+            sm:text-3xl md:w-[428px] [@media(max-width:390px)]:text-[20px]">
           Это не просто магазин.
           <br />
           Это место для{' '}
