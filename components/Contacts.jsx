@@ -58,7 +58,14 @@ export default function Contacts({ data }) {
         src="/optimized/Мороженое.webp"
         alt="Мороженое"
         loading="lazy"
-        className="pointer-events-none absolute right-12 top-[calc(58%)] h-[220px] w-auto max-w-[220px] -translate-y-1/2 transition-opacity duration-500 ease-out z-20"
+        className="
+          pointer-events-none absolute right-12 top-0
+          translate-y-[6rem]
+          sm:translate-y-[8rem]
+          max-[430px]:translate-y-[30.5rem]
+          h-[220px] w-auto max-w-[220px]
+          transition-opacity duration-500 ease-out z-20
+        "
       />
     </section>
   );
