@@ -57,7 +57,7 @@ export default function Header() {
               type="button"
               aria-label="Закрыть меню"
               onClick={() => setMenuOpen(false)}
-              className="absolute left-1/2 top-[-44px] inline-flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-none border-[12px] border-white bg-[#A78BFA] text-xl text-white shadow-[0_14px_10px_-8px_rgba(0,0,0,0.72)] transition duration-300 ease-out hover:bg-[#9774f0] max-[375px]:left-[50%] max-[375px]:top-[76px] max-[375px]:-translate-x-1/2 max-[414px]:left-1/2 max-[414px]:top-[-20px] max-[414px]:-translate-x-1/2 max-[430px]:left-1/2 max-[430px]:top-[-20px] max-[430px]:-translate-x-1/2"
+              className="absolute left-1/2 top-[-44px] inline-flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-none border-[6px] border-white bg-[#A78BFA] text-xl text-white shadow-[0_15px_0_-8px_rgba(0,0,0,0.72)] transition duration-300 ease-out hover:bg-[#9774f0] max-[375px]:left-[50%] max-[375px]:top-[76px] max-[375px]:-translate-x-1/2 max-[414px]:left-1/2 max-[414px]:top-[-20px] max-[414px]:-translate-x-1/2 max-[430px]:left-1/2 max-[430px]:top-[-20px] max-[430px]:-translate-x-1/2"
             >
               ✕
             </button>
