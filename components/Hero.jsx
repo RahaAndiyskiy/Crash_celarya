@@ -47,23 +47,24 @@ export default function Hero({ data }) {
       <div className="mx-auto max-w-7xl relative overflow-visible">
         <div ref={manulOuterRef} className="absolute left-1/2 top-0 z-0 -translate-x-1/2 -translate-y-[71%] pointer-events-none">
           <div className="relative">
-            <div className="absolute -right-16 -top-12 z-0 pointer-events-none sm:-right-10 sm:-top-10 max-[430px]:-right-12 max-[430px]:-top-20 max-[430px]:-translate-x-3 max-[430px]:-translate-y-2 opacity-90">
-              <img
-                ref={cloudImageRef}
-                src="/optimized/Облачко новое.webp"
-                alt=""
-                loading="eager"
-                className="h-[220px] w-auto opacity-0 sm:h-[280px]"
-                style={{ transform: 'rotate(25deg) scale(0.8)' }}
-                aria-hidden="true"
-              />
-            </div>
-            <div className="absolute -left-12 top-[-58%] z-0 pointer-events-none sm:-left-14 sm:top-[-50%] max-[430px]:-left-[4.5rem] max-[430px]:top-[-54%] max-[430px]:-translate-x-3 max-[430px]:-translate-y-3 opacity-90">
+            <div className="absolute right-0 top-0 z-0 pointer-events-none opacity-90">
+  <img
+    ref={cloudImageRef}
+    src="/optimized/Облачко новое.webp"
+    alt=""
+    loading="eager"
+    className="h-[220px] w-auto opacity-0 sm:h-[280px]"
+    style={{ transform: 'translate(2rem, -5rem) rotate(25deg) scale(0.8)' }}
+    aria-hidden="true"
+  />
+</div>
+
+            <div className="absolute left-0 top-0 z-0 pointer-events-none opacity-90">
               <img
                 src="/optimized/hero-sticker.webp"
                 alt=""
                 loading="eager"
-                className="h-[162px] w-auto rotate-0 object-contain opacity-95 sm:h-[234px]"
+                className="h-[162px] w-auto object-contain opacity-95 sm:h-[234px] -translate-x-12 -translate-y-[58%] sm:-translate-x-14 sm:-translate-y-[50%] max-[430px]:-translate-x-[4.5rem] max-[430px]:-translate-y-[54%]"
                 aria-hidden="true"
               />
             </div>
