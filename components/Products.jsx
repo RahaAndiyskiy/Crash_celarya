@@ -68,68 +68,69 @@ export default function Products({ items }) {
   };
 
   return (
-    <section id="products" className="relative space-y-6 mt-24">
-      <div className="flex flex-row flex-nowrap items-start justify-between gap-6 overflow-hidden">
-        <div className="min-w-[220px] max-w-[420px] space-y-5">
-          <img
-            src="/optimized/Люблю школу.webp"
-            alt="Люблю школу"
-            loading="lazy"
-            className="relative left-[43px] top-[31px] h-24 w-auto object-contain sm:h-[7.5rem] -rotate-[10deg] transition-opacity duration-500 ease-out"
-          />
-          <div className="text-left">
-            <h2 className="text-2xl font-nunito font-black tracking-tight text-primary leading-[0.95]">
-              Все по
-              <br />
-              полочкам.
-            </h2>
-            <p className="mt-2 font-rubik text-[14px] text-secondary leading-relaxed">
-              Пользуйся и кайфуй.
-            </p>
+    <section id="products" className="relative space-y-6 mt-24 lg:mt-12">
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-12">
+        <div className="lg:w-[30%] flex-shrink-0 lg:hidden">
+          <div className="flex flex-row flex-nowrap items-start justify-between gap-6 overflow-hidden">
+            <div className="min-w-[220px] max-w-[420px] space-y-5">
+              <img
+                src="/optimized/Люблю школу.webp"
+                alt="Люблю школу"
+                loading="lazy"
+                className="relative left-[43px] top-[31px] lg:left-[0px] lg:top-[0px] lg:translate-x-0 lg:translate-y-0 h-24 w-auto object-contain sm:h-[7.5rem] -rotate-[10deg] transition-opacity duration-500 ease-out"
+              />
+              <div className="text-left">
+                <h2 className="text-2xl font-nunito font-black tracking-tight text-primary leading-[0.95]">
+                  Все по
+                  <br />
+                  полочкам.
+                </h2>
+              </div>
+            </div>
+            <div className="flex-shrink-0 relative -mt-2 -ml-10 lg:ml-0 lg:mt-0 max-[420px]:-ml-12 max-[360px]:-ml-14">
+              <img
+                src="/optimized/Манул_Хит.webp"
+                alt=""
+                loading="lazy"
+                className="relative left-[-25px] lg:left-[0px] max-[420px]:left-[-40px] max-[360px]:left-[-26px] top-[15px] lg:top-[0px] lg:translate-x-0 lg:translate-y-0 h-[180px] w-auto object-contain drop-shadow-[0_4px_0_rgba(0,0,0,0.7)] transition-opacity duration-500 ease-out"
+              />
+            </div>
           </div>
         </div>
-        <div className="flex-shrink-0 relative -mt-2 -ml-10 max-[420px]:-ml-12 max-[360px]:-ml-14">
-          <img
-            src="/optimized/Манул_Хит.webp"
-            alt=""
-            loading="lazy"
-            className="relative left-[-25px] max-[420px]:left-[-40px] max-[360px]:left-[-26px] top-[15px] h-[180px] w-auto object-contain drop-shadow-[0_4px_0_rgba(0,0,0,0.7)] transition-opacity duration-500 ease-out"
-          />
-        </div>
-      </div>
-
-      <div className="space-y-3">
-        <div className="relative">
-          <button
-            type="button"
-            onClick={() => scrollCarousel(-1)}
-            className="hidden lg:flex absolute left-0 top-1/2 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-slate-200/70 transition hover:bg-slate-50"
-            aria-label="Прокрутить влево"
-          >
-            ‹
-          </button>
-          <button
-            type="button"
-            onClick={() => scrollCarousel(1)}
-            className="hidden lg:flex absolute right-0 top-1/2 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-slate-200/70 transition hover:bg-slate-50"
-            aria-label="Прокрутить вправо"
-          >
-            ›
-          </button>
-          <div
-            ref={carouselRef}
-            className="products-carousel flex gap-4 overflow-x-auto overflow-y-visible px-[50px] py-[50px] snap-x snap-mandatory scroll-smooth cursor-grab"
-            onScroll={handleScroll}
-            onPointerDown={handlePointerDown}
-            onPointerMove={handlePointerMove}
-            onPointerUp={handlePointerUp}
-            onPointerLeave={handlePointerLeave}
-          >
-            {items.map((item, i) => (
-            <div
-              key={i}
-              className="product-card min-w-[220px] h-[326px] snap-start bg-white rounded-2xl p-3 shadow-none transform transition-transform duration-300 hover:scale-[1.02]"
-            >
+        <div className="lg:w-[80%] lg:mx-auto">
+          <div className="space-y-3">
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => scrollCarousel(-1)}
+                className="hidden lg:flex absolute left-0 top-1/2 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-slate-200/70 transition hover:bg-slate-50"
+                aria-label="Прокрутить влево"
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollCarousel(1)}
+                className="hidden lg:flex absolute right-0 top-1/2 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-slate-200/70 transition hover:bg-slate-50"
+                aria-label="Прокрутить вправо"
+              >
+                ›
+              </button>
+              <div className="relative">
+                <div
+                  ref={carouselRef}
+                  className="products-carousel flex w-full gap-4 overflow-x-auto overflow-y-visible px-[50px] lg:px-0 py-[50px] snap-x snap-mandatory scroll-smooth cursor-grab"
+                  onScroll={handleScroll}
+                  onPointerDown={handlePointerDown}
+                  onPointerMove={handlePointerMove}
+                  onPointerUp={handlePointerUp}
+                  onPointerLeave={handlePointerLeave}
+                >
+                  {items.map((item, i) => (
+                  <div
+                    key={i}
+                    className="product-card min-w-[220px] h-[326px] snap-start bg-white rounded-2xl p-3 shadow-none transform transition-transform duration-300 hover:scale-[1.02]"
+                  >
               <div className="overflow-hidden rounded-2xl p-[4px] bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400">
                 <img
                   src={item.image}
@@ -162,6 +163,9 @@ export default function Products({ items }) {
         </div>
       </div>
     </div>
+  </div>
+</div>
+</div>
 
       <style jsx>{`
         .products-carousel {
