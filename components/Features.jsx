@@ -100,7 +100,7 @@ export default function Features({ items }) {
           <a href="/socials" aria-label="Instagram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
             <img src="/Icons SVG/icons8-instagram-100.svg" alt="Instagram" className="h-8 w-8" />
           </a>
-          <a href="/socials" aria-label="Telegram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+          <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" aria-label="Telegram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
             <img src="/Icons SVG/icons8-telegram-app-100.svg" alt="Telegram" className="h-8 w-8" />
           </a>
           <a href="/socials" aria-label="VK" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">

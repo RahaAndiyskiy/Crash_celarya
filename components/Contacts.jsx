@@ -20,7 +20,7 @@ export default function Contacts({ data }) {
 
         <div className="mx-auto w-fit relative -top-6 mb-16 z-10">
           <a
-            href="https://telegram.org/a/#683846671"
+            href="https://t.me/NatashaTishman"
             target="_blank"
             rel="noreferrer"
             className="block w-fit rotate-[-6deg] rounded-2xl border-4 border-white bg-gradient-to-br from-purple-200 to-pink-200 px-4 py-3 font-semibold shadow-xl text-center"
