@@ -19,10 +19,11 @@ export default function Features({ items }) {
     3: '-rotate-[1.2deg]',
   };
 
+  // Размеры карточек УТП: базовый размер для телефона, затем планшет и ПК
   const cardShapes = {
-    1: 'max-w-[352px] min-h-[240px] sm:max-w-[580px] sm:min-h-[360px] rounded-none',
-    2: 'aspect-square max-w-[336px] sm:max-w-[480px] min-h-0 rounded-full',
-    3: 'max-w-[352px] min-h-[240px] sm:max-w-[440px] sm:min-h-[340px] rounded-[1.2rem]',
+    1: 'w-full max-w-[320px] min-h-[240px] sm:max-w-[520px] sm:min-h-[320px] md:max-w-[580px] md:min-h-[360px] rounded-none',
+    2: 'w-full aspect-square max-w-[300px] sm:max-w-[440px] md:max-w-[480px] min-h-0 rounded-full',
+    3: 'w-full max-w-[320px] min-h-[240px] sm:max-w-[420px] sm:min-h-[320px] md:max-w-[440px] md:min-h-[340px] rounded-[1.2rem]',
   };
 
   const pastelColors = ['text-rose-300', 'text-fuchsia-300', 'text-violet-300', 'text-sky-300', 'text-emerald-300', 'text-lime-300', 'text-amber-300', 'text-cyan-300'];
@@ -98,70 +99,78 @@ export default function Features({ items }) {
   lg:pb-12 bg-gradient-to-b from-[#FFF7EB] to-[#F5F3FF] 
   shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
   <div className="mx-auto w-full max-w-6xl">
-    
-    <div className="flex items-center gap-8 relative">
+    <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12">
+      <div className="lg:w-[35%] flex-shrink-0">
+        <div className="flex items-center gap-8 relative">
 
-      {/* МАНУЛ */}
-      <div className="relative md:left-[-51px] md:top-[-4px] w-[180px] 
-          sm:w-[220px] 
-          lg:w-[260px] flex-shrink-0">
-        <img
-          src="/optimized/Манул_Топ.webp"
-          alt="Манул"
-          loading="lazy"
-          className="
-            w-full h-auto
-            translate-x-[-10%]
-            translate-y-[5%]
-            pointer-events-none
-            drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]
-          "
-        />
-      </div>
-
-      {/* ТВОЙ КОНТЕНТ СПРАВА */}
-      <div className="flex-1 min-w-0 w-full space-y-4 text-left">
-        <img
-              src="/optimized/Наш вайб.webp"
-              alt="Наш Вайб"
+          {/* МАНУЛ */}
+          <div className="relative md:left-[-51px] md:top-[-4px] w-[180px] 
+              sm:w-[220px] 
+              lg:w-[260px] flex-shrink-0">
+            <img
+              src="/optimized/Манул_Топ.webp"
+              alt="Манул"
               loading="lazy"
-              className="relative left-[-70px] md:left-[-140px] md:top-[-18px] w-auto max-w-[180px] 
-              sm:max-w-[220px] 
-              sm:h-[170px] 
-              md:max-w-[260px] h-[150px] 
-              md:h-[190px] 
-              rotate-[-10deg] 
-              transition-opacity duration-500 ease-out"
-        />
+              className="
+                w-full h-auto
+                translate-x-[-10%]
+                translate-y-[5%]
+                pointer-events-none
+                drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]
+              "
+            />
+          </div>
 
-        {/* h2 alignment: mobile first with desktop overrides */}
-        <h2 className="relative 
-            left-[-35px] 
-            md:left-[-220px] md:top-[2px] w-[129px] md:text-2xl 
-            text-[17px] font-nunito font-extrabold leading-tight 
-            text-primary text-center 
-            sm:text-3xl md:w-[428px] [@media(max-width:390px)]:text-[20px]">
-          Это не просто магазин.
-          <br />
-          Это место для{' '}
-          <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
-            тусовок
-          </span>
-          .
-        </h2>
+          {/* ТВОЙ КОНТЕНТ СПРАВА */}
+          <div className="flex-1 min-w-0 w-full space-y-4 text-left">
+            <img
+                  src="/optimized/Наш вайб.webp"
+                  alt="Наш Вайб"
+                  loading="lazy"
+                  className="relative left-[-70px] md:left-[-140px] md:top-[-18px] w-auto max-w-[180px] 
+                  sm:max-w-[220px] 
+                  sm:h-[170px] 
+                  md:max-w-[260px] h-[150px] 
+                  md:h-[190px] 
+                  rotate-[-10deg] 
+                  transition-opacity duration-500 ease-out"
+            />
+
+            {/* h2 alignment: mobile first with desktop overrides */}
+            <h2 className="relative 
+                left-[-35px] 
+                md:left-[-220px] md:top-[2px] w-[129px] md:text-2xl 
+                text-[17px] font-nunito font-extrabold leading-tight 
+                text-primary text-center 
+                sm:text-3xl md:w-[428px] [@media(max-width:390px)]:text-[20px]">
+              Это не просто магазин.
+              <br />
+              Это место для{' '}
+              <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
+                тусовок
+              </span>
+              .
+            </h2>
+          </div>
+
+        </div>
       </div>
 
-    </div>
-
-  </div>
-
+      <div className="lg:w-[65%]">
       {items?.length ? (
         <div className="relative">
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {/* Сетка карточек: телефон 1 колонка, планшет 2 колонки, ПК 3 колонки */}
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {items.slice(0, 4).map((item) => (
               <article
                 key={item.id}
-                className={`relative mx-auto overflow-hidden border-[12px] border-white ${cardShapes[item.id] ?? 'max-w-[420px] min-h-[280px] sm:min-h-[320px] rounded-[1.2rem]'} ${cardBackgrounds[item.id] ?? 'bg-slate-100'} ${cardTransforms[item.id] ?? ''} transform-gpu shadow-[10px_10px_0_rgba(0,0,0,0.78)] transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0`}
+                className={`relative mx-auto w-full overflow-hidden border-[12px] border-white
+                  ${cardShapes[item.id] ?? 'w-full max-w-[420px] min-h-[280px] sm:min-h-[320px] rounded-[1.2rem]'}
+                  ${cardBackgrounds[item.id] ?? 'bg-slate-100'}
+                  ${cardTransforms[item.id] ?? ''}
+                  lg:aspect-[3/4] lg:min-h-0 lg:h-auto
+                  transform-gpu shadow-[10px_10px_0_rgba(0,0,0,0.78)]
+                  transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0`}
               >
                 <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
                   {(cardDecorations[item.id] ?? []).map((dec, index) => {
@@ -180,8 +189,9 @@ export default function Features({ items }) {
                     );
                   })}
                 </div>
-                <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 py-8 text-center">
-                  <h3 className="text-[clamp(1.6rem,4vw,2.4rem)] font-nunito font-semibold text-primary tracking-[-0.03em]">
+                <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 py-8 text-center lg:max-w-[90%]">
+                  {/* Заголовок карточки: размер фиксирован на desktop через lg: */}
+                  <h3 className="text-[clamp(1.6rem,4vw,2.4rem)] lg:text-[1.4rem] lg:leading-tight font-nunito font-semibold text-primary tracking-[-0.03em]">
                   {highlightTitleWords(item.title).map((part, index) =>
                     typeof part === 'string' ? (
                       <span key={index} className="block">
@@ -194,7 +204,8 @@ export default function Features({ items }) {
                     )
                   )}
                 </h3>
-                  <p className="mt-4 text-[clamp(0.95rem,2.4vw,1rem)] text-secondary leading-7">
+                  {/* Описание карточки: компактнее на desktop через lg: */}
+                  <p className="mt-4 text-[clamp(0.95rem,2.4vw,1rem)] lg:text-[0.95rem] text-secondary leading-7 lg:leading-6">
                     {item.description}
                   </p>
                 </div>
@@ -207,6 +218,9 @@ export default function Features({ items }) {
           Пока нет данных для карточек.
         </div>
       )}
+      </div>
+    </div>
+  </div>
         {showTopButton ? (
           <button
             type="button"

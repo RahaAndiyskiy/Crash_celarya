@@ -60,6 +60,13 @@ export default function Products({ items }) {
     setIsDragging(false);
   };
 
+  const scrollCarousel = (direction) => {
+    const container = carouselRef.current;
+    if (!container) return;
+    const cardWidth = 220 + 16;
+    container.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+  };
+
   return (
     <section id="products" className="relative space-y-6 mt-24">
       <div className="flex flex-row flex-nowrap items-start justify-between gap-6 overflow-hidden">
@@ -92,16 +99,33 @@ export default function Products({ items }) {
       </div>
 
       <div className="space-y-3">
-        <div
-          ref={carouselRef}
-          className="products-carousel flex gap-4 overflow-x-auto overflow-y-visible px-[50px] py-[50px] snap-x snap-mandatory scroll-smooth cursor-grab"
-          onScroll={handleScroll}
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-          onPointerLeave={handlePointerLeave}
-        >
-          {items.map((item, i) => (
+        <div className="relative">
+          <button
+            type="button"
+            onClick={() => scrollCarousel(-1)}
+            className="hidden lg:flex absolute left-0 top-1/2 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-slate-200/70 transition hover:bg-slate-50"
+            aria-label="Прокрутить влево"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollCarousel(1)}
+            className="hidden lg:flex absolute right-0 top-1/2 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-slate-200/70 transition hover:bg-slate-50"
+            aria-label="Прокрутить вправо"
+          >
+            ›
+          </button>
+          <div
+            ref={carouselRef}
+            className="products-carousel flex gap-4 overflow-x-auto overflow-y-visible px-[50px] py-[50px] snap-x snap-mandatory scroll-smooth cursor-grab"
+            onScroll={handleScroll}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerLeave={handlePointerLeave}
+          >
+            {items.map((item, i) => (
             <div
               key={i}
               className="product-card min-w-[220px] h-[326px] snap-start bg-white rounded-2xl p-3 shadow-none transform transition-transform duration-300 hover:scale-[1.02]"
@@ -137,6 +161,7 @@ export default function Products({ items }) {
           ))}
         </div>
       </div>
+    </div>
 
       <style jsx>{`
         .products-carousel {
