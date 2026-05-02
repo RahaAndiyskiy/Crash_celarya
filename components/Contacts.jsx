@@ -18,19 +18,21 @@ export default function Contacts({ data }) {
           <p className="text-slate-500">{data.hours}</p>
         </div>
 
-        <a
-          href="https://web.telegram.org/a/#683846671"
-          target="_blank"
-          rel="noreferrer"
-          className="mx-auto block w-fit rotate-[-6deg] rounded-2xl bg-gradient-to-br from-purple-200 to-pink-200 px-4 py-3 mb-[30px] font-semibold shadow-xl text-center"
-          aria-label="Написать нам"
-        >
-          {data.button}
-        </a>
+        <div className="mx-auto w-fit relative -top-6 mb-16 z-10">
+          <a
+            href="https://telegram.org/a/#683846671"
+            target="_blank"
+            rel="noreferrer"
+            className="block w-fit rotate-[-6deg] rounded-2xl border-4 border-white bg-gradient-to-br from-purple-200 to-pink-200 px-4 py-3 font-semibold shadow-xl text-center"
+            aria-label="Написать нам"
+          >
+            {data.button}
+          </a>
+        </div>
 
         {/* КАРТА — база */}
         <div className="relative mt-10">
-          <div className="rounded-3xl border bg-white p-4 shadow-xl">
+          <div className="rounded-3xl border bg-white p-4 shadow-2xl shadow-purple-500/50 ring-2 ring-purple-200/60">
             <div className="h-[220px] rounded-2xl bg-slate-200 flex items-center justify-center">
               <div className="h-3 w-3 rounded-full bg-pink-500"></div>
             </div>
