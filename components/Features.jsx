@@ -93,45 +93,61 @@ export default function Features({ items }) {
   };
 
   return (
-  <section className="space-y-8 pt-12 pb-8 px-4 sm:px-6  sm:pb-10 lg:pb-12 bg-gradient-to-b from-[#FFF7EB] to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
-    <div className="mx-auto w-full max-w-6xl">
-      <div className="flex flex-row flex-nowrap items-center overflow-hidden gap-8 ">
-        
-        <div className="flex-shrink-0 w-[140px] relative">
-          <img
-            src="/optimized/Манул_Топ.webp"
-            alt="Манул"
-            loading="lazy"
-            className="h-[280px] w-[200px] object-contain absolute -left-[11px] top-[80px] max-[430px]:-left-[11px] max-[420px]:top-[46px] max-[390px]:-left-[6px] max-[390px]:top-[10px] max-[360px]:-left-[3px] max-[360px]:top-[4px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)] transition-opacity duration-500 ease-out"
-          />
-        </div>
+  <section className="space-y-8 pt-12 pb-8 px-4 sm:px-6 sm:pb-10 lg:pb-12 bg-gradient-to-b from-[#FFF7EB] to-[#F5F3FF] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)]">
+  <div className="mx-auto w-full max-w-6xl">
+    
+    <div className="flex items-center gap-8 relative">
 
-        <div className="flex-1 min-w-0 w-full space-y-4 text-left">
-          <img
-                src="/optimized/Наш вайб.webp"
-                alt="Наш Вайб"
-                loading="lazy"
-                className="w-auto max-w-[180px] sm:max-w-[220px] md:max-w-[260px] h-[150px] sm:h-[170px] md:h-[190px] rotate-[-10deg] transition-opacity duration-500 ease-out"
-          />
-
-          <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary text-left sm:text-3xl [@media(max-width:390px)]:text-[20px]">
-            Это не просто магазин.
-            <br />
-            Это место для{' '}
-            <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
-              тусовок
-            </span>
-            .
-          </h2>
-
-          <p className="text-sm text-secondary sm:text-base text-left leading-relaxed [@media(max-width:390px)]:text-[13px]">
-            Тут есть все, что нужно
-            <span className="block sm:inline"> для школы, учебы и твоего стиля.</span>
-          </p>
-        </div>
-
+      {/* МАНУЛ */}
+      <div className="relative left-[12px] top-[24px] md:left-auto md:top-auto w-[180px] sm:w-[220px] lg:w-[260px] flex-shrink-0">
+        <img
+          src="/optimized/Манул_Топ.webp"
+          alt="Манул"
+          loading="lazy"
+          className="
+            w-full h-auto
+            translate-x-[-10%]
+            translate-y-[5%]
+            pointer-events-none
+            drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]
+          "
+        />
       </div>
+
+      {/* ТВОЙ КОНТЕНТ СПРАВА */}
+      <div className="flex-1 min-w-0 w-full space-y-4 text-left">
+        <img
+              src="/optimized/Наш вайб.webp"
+              alt="Наш Вайб"
+              loading="lazy"
+              className="relative left-[-67px] top-[-9px] w-auto max-w-[180px] 
+              sm:max-w-[220px] 
+              sm:h-[170px] 
+              md:max-w-[260px] h-[150px] 
+              md:h-[190px] 
+              rotate-[-10deg] 
+              md:left-[83px] md:top-[-10px] 
+              transition-opacity duration-500 ease-out"
+        />
+
+        <h2 className="relative left-[-33px] top-[-20px] w-[129px] 
+            text-[17px] font-nunito font-extrabold leading-tight 
+            text-primary text-center 
+            sm:text-3xl md:left-[36px] 
+            md:top-[-38px] md:w-[428px] [@media(max-width:390px)]:text-[20px]">
+          Это не просто магазин.
+          <br />
+          Это место для{' '}
+          <span className="bg-gradient-to-r from-pink-400 via-fuchsia-500 to-rose-500 bg-clip-text text-transparent">
+            тусовок
+          </span>
+          .
+        </h2>
+      </div>
+
     </div>
+
+  </div>
 
       {items?.length ? (
         <div className="relative">
