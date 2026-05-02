@@ -126,17 +126,19 @@ export default function Features({ items }) {
         
         <div className="flex-shrink-0 w-[140px] relative">
           <img
-            src="/Манул_Топ.webp"
+            src="/optimized/Манул_Топ.webp"
             alt="Манул"
-            className="h-[280px] w-[200px] object-contain absolute -left-[11px] top-[80px] max-[430px]:-left-[11px] max-[420px]:top-[46px] max-[390px]:-left-[6px] max-[390px]:top-[10px] max-[360px]:-left-[3px] max-[360px]:top-[4px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)]"
+            loading="lazy"
+            className="h-[280px] w-[200px] object-contain absolute -left-[11px] top-[80px] max-[430px]:-left-[11px] max-[420px]:top-[46px] max-[390px]:-left-[6px] max-[390px]:top-[10px] max-[360px]:-left-[3px] max-[360px]:top-[4px] -translate-y-1/2 max-w-none drop-shadow-[-1px_2px_0_rgba(0,0,0,0.5)] transition-opacity duration-500 ease-out"
           />
         </div>
 
         <div className="flex-1 min-w-0 w-full space-y-4 text-left">
           <img
-                src="/Наш вайб.webp"
+                src="/optimized/Наш вайб.webp"
                 alt="Наш Вайб"
-                className="w-full max-w-[180px] sm:max-w-[220px] md:max-w-[260px] h-auto rotate-[-10deg]"
+                loading="lazy"
+                className="w-auto max-w-[180px] sm:max-w-[220px] md:max-w-[260px] h-[150px] sm:h-[170px] md:h-[190px] rotate-[-10deg] transition-opacity duration-500 ease-out"
           />
 
           <h2 className="text-2xl font-nunito font-extrabold leading-tight text-primary text-left sm:text-3xl [@media(max-width:390px)]:text-[20px]">

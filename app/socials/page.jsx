@@ -12,7 +12,7 @@ export default function SocialsStub() {
         </div>
 
         <img
-          src="/manul_dreamV2.webp"
+          src="/optimized/manul_dreamV2.webp"
           alt="Манул"
           className="mx-auto w-full max-w-[420px] object-contain"
         />

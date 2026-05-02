@@ -9,7 +9,7 @@ export default function Header() {
     <>
       <header className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-3xl items-center justify-between rounded-b-[28px] rounded-t-none bg-gradient-to-r from-rose-100 via-fuchsia-100 to-yellow-200 px-4 py-3 border-[12px] border-white border-t-0 shadow-[0_6px_0_rgba(0,0,0,0.6)]">
         <div className="flex items-center gap-2">
-          <img src="/Logo_new.webp" alt="Крашцелярия" className="h-18 w-auto max-w-[220px] object-contain sm:h-22 sm:max-w-[160px]" />
+          <img src="/optimized/Logo_new.webp" alt="Крашцелярия" loading="eager" className="h-18 w-auto max-w-[220px] object-contain sm:h-22 sm:max-w-[160px]" />
         </div>
 
         <nav className="hidden gap-4 md:flex text-sm text-secondary">
@@ -42,7 +42,7 @@ export default function Header() {
           </button>
         </div>
       </header>
-      <img src="/Manul_02.webp" alt="" aria-hidden="true" className="sr-only" />
+      <img src="/optimized/Manul_02.webp" alt="" aria-hidden="true" className="sr-only" />
 
       {menuOpen && (
         <div className="menu-backdrop fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-rose-100/80 via-fuchsia-100/70 to-yellow-200/70 p-6 backdrop-blur-xl md:hidden">
@@ -75,7 +75,7 @@ export default function Header() {
 
             <div className="mt-6 flex justify-center">
               <img
-                src="/Manul_02.webp"
+                src="/optimized/Manul_02.webp"
                 alt="Манул"
                 className="relative left-[-3px] top-[76px] h-[21rem] w-auto object-contain drop-shadow-[0_10px_0_rgba(0,0,0,0.78)] translate-y-[56px] max-[375px]:top-[-23px] max-[375px]:translate-y-0"
               />

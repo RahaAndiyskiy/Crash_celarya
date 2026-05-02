@@ -29,32 +29,32 @@ export const products = [
     id: 1,
     name: 'Новинки недели',
     price: '499 ₽',
-    image: '/Cards/Новинки.webp',
+    image: '/optimized/Cards/Новинки.webp',
   },
   {
     id: 2,
     name: 'Выбор манула',
-    image: '/Cards/Выбор Манула.webp',
+    image: '/optimized/Cards/Выбор Манула.webp',
   },
   {
     id: 3,
     name: 'Топ для школы',
-    image: '/Cards/Топ для школы.webp',
+    image: '/optimized/Cards/Топ для школы.webp',
   },
   {
     id: 4,
     name: 'Мерч блогеров',
-    image: '/Cards/Мерч.webp',
+    image: '/optimized/Cards/Мерч.webp',
   },
   {
     id: 5,
     name: 'Вкусняшки',
-    image: '/Cards/Вкусняшки.webp',
+    image: '/optimized/Cards/Вкусняшки.webp',
   },
   {
     id: 6,
     name: 'Игрушки',
-    image: '/Cards/Игрушки.webp',
+    image: '/optimized/Cards/Игрушки.webp',
   },
 ];
 

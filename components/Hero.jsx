@@ -47,20 +47,22 @@ export default function Hero({ data }) {
       <div className="mx-auto max-w-7xl relative overflow-visible">
         <div ref={manulOuterRef} className="absolute left-1/2 top-0 z-0 -translate-x-1/2 -translate-y-[71%] pointer-events-none">
           <div className="relative">
-            <div className="absolute -right-2 -top-14 z-0 pointer-events-none sm:-right-10 sm:-top-10">
+            <div className="absolute -right-16 -top-12 z-0 pointer-events-none sm:-right-10 sm:-top-10 max-[430px]:-right-12 max-[430px]:-top-20 max-[430px]:-translate-x-3 max-[430px]:-translate-y-2 opacity-90">
               <img
                 ref={cloudImageRef}
-                src="/Облачко новое.webp"
+                src="/optimized/Облачко новое.webp"
                 alt=""
+                loading="eager"
                 className="h-[220px] w-auto opacity-0 sm:h-[280px]"
                 style={{ transform: 'rotate(25deg) scale(0.8)' }}
                 aria-hidden="true"
               />
             </div>
-            <div className="absolute -left-8 top-[-50%] z-0 pointer-events-none sm:-left-14 sm:top-[-32%] opsacity-90">
+            <div className="absolute -left-12 top-[-58%] z-0 pointer-events-none sm:-left-14 sm:top-[-50%] max-[430px]:-left-[4.5rem] max-[430px]:top-[-54%] max-[430px]:-translate-x-3 max-[430px]:-translate-y-3 opacity-90">
               <img
-                src="/hero-sticker.webp"
+                src="/optimized/hero-sticker.webp"
                 alt=""
+                loading="eager"
                 className="h-[162px] w-auto rotate-0 object-contain opacity-95 sm:h-[234px]"
                 aria-hidden="true"
               />
@@ -84,8 +86,9 @@ export default function Hero({ data }) {
               <span className="relative inline-block whitespace-normal text-[3rem] sm:text-[4.5rem] leading-none bg-gradient-to-r from-violet-500 via-fuchsia-500 to-yellow-400 bg-clip-text text-transparent">
                 влюбишься
                 <img
-                  src="/Сердце лайм.webp"
+                  src="/optimized/Сердце лайм.webp"
                   alt=""
+                  loading="eager"
                   aria-hidden="true"
                   className="absolute left-3/4 top-1/2 z-0 h-[3.75rem] w-auto -translate-x-1/2 -translate-y-1/2 sm:h-[6rem]"
                   style={{ transform: 'rotate(45deg)' }}
@@ -100,8 +103,9 @@ export default function Hero({ data }) {
             <div className="relative mb-5 w-full">
               <div className="absolute left-0 bottom-10 z-0 pointer-events-none sm:-left-12 sm:bottom-16" style={{ opacity: 0.4 }}>
                 <img
-                  src="/клякса фиол.webp"
+                  src="/optimized/клякса фиол.webp"
                   alt=""
+                  loading="eager"
                   className="w-[135px] h-auto opacity-100 sm:w-[248px]"
                   aria-hidden="true"
                 />

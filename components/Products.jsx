@@ -64,7 +64,12 @@ export default function Products({ items }) {
     <section id="products" className="relative space-y-6 mt-24">
       <div className="flex flex-row flex-nowrap items-start justify-between gap-6 overflow-hidden">
         <div className="min-w-[220px] max-w-[420px] space-y-5">
-          <img src="/Люблю школу.webp" alt="Люблю школу" className="relative left-[43px] top-[31px] h-24 w-auto object-contain sm:h-[7.5rem] -rotate-[10deg]" />
+          <img
+            src="/optimized/Люблю школу.webp"
+            alt="Люблю школу"
+            loading="lazy"
+            className="relative left-[43px] top-[31px] h-24 w-auto object-contain sm:h-[7.5rem] -rotate-[10deg] transition-opacity duration-500 ease-out"
+          />
           <div className="text-left">
             <h2 className="text-2xl font-nunito font-black tracking-tight text-primary leading-[0.95]">
               Все по
@@ -78,9 +83,10 @@ export default function Products({ items }) {
         </div>
         <div className="flex-shrink-0 relative -mt-2 -ml-10 max-[420px]:-ml-12 max-[360px]:-ml-14">
           <img
-            src="/Манул_Хит.webp"
+            src="/optimized/Манул_Хит.webp"
             alt=""
-            className="relative left-[-25px] max-[420px]:left-[-40px] max-[360px]:left-[-26px] top-[15px] h-[180px] w-auto object-contain drop-shadow-[0_4px_0_rgba(0,0,0,0.7)]"
+            loading="lazy"
+            className="relative left-[-25px] max-[420px]:left-[-40px] max-[360px]:left-[-26px] top-[15px] h-[180px] w-auto object-contain drop-shadow-[0_4px_0_rgba(0,0,0,0.7)] transition-opacity duration-500 ease-out"
           />
         </div>
       </div>
@@ -103,7 +109,8 @@ export default function Products({ items }) {
               <div className="overflow-hidden rounded-2xl p-[4px] bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400">
                 <img
                   src={item.image}
-                  className="w-full h-[246px] object-cover rounded-xl"
+                  loading="lazy"
+                  className="w-full h-[246px] object-cover rounded-xl transition-opacity duration-500 ease-out"
                   alt={item.name}
                 />
               </div>

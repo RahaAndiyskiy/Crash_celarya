@@ -1,14 +1,21 @@
+'use client';
+
 export default function Contacts({ data }) {
   return (
     <section id="contacts" className="relative grid gap-8 p-8 md:grid-cols-[1.1fr_0.9fr]">
-      <div className="space-y-5">
-        <img src="/Контакты.webp" alt="Контакты" className="h-auto max-w-[260px] -rotate-[8deg]" />
-        <h2 className="text-2xl font-nunito font-black text-primary sm:text-3xl">Залетай на тусу<br />или звони</h2>
-        <div className="space-y-2 text-secondary font-rubik">
+      <div className="relative space-y-5 -top-8 max-[430px]:-top-12 max-[430px]:left-3 max-[375px]:left-4">
+        <img
+          src="/optimized/Контакты.webp"
+          alt="Контакты"
+          loading="lazy"
+          className="h-[276px] w-auto max-w-[280px] -rotate-[8deg] transition-opacity duration-500 ease-out"
+        />
+        <h2 className="text-2xl font-nunito font-black text-primary text-center sm:text-3xl">Залетай на тусу<br />или звони</h2>
+        <div className="space-y-2 text-secondary text-center font-rubik">
           <p>{data.location}</p>
           <p>{data.hours}</p>
         </div>
-        <a href="https://web.telegram.org/a/#683846671" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-2xl border-[12px] border-white bg-gradient-to-br from-violet-200 via-fuchsia-200 to-violet-100 px-6 py-3 text-sm font-semibold text-primary shadow-[0_0_30px_rgba(139,92,246,0.4)] transform transition duration-200 hover:-translate-y-0.5 rotate-[7deg]">
+        <a href="https://web.telegram.org/a/#683846671" target="_blank" rel="noreferrer" className="mx-auto inline-flex w-fit items-center justify-center rounded-2xl border-[12px] border-white bg-gradient-to-br from-violet-200 via-fuchsia-200 to-violet-100 px-4 py-3 text-sm font-semibold text-primary shadow-[0_0_30px_rgba(139,92,246,0.4)] transition duration-200 hover:-translate-y-0.5 rotate-[7deg]">
           {data.button}
         </a>
       </div>
@@ -47,7 +54,12 @@ export default function Contacts({ data }) {
           </div>
         </div>
       </div>
-      <img src="/Мороженое.webp" alt="Мороженое" className="pointer-events-none absolute right-6 top-[calc(50%+40px)] h-auto max-w-[220px] -translate-y-1/2 z-20" />
+      <img
+        src="/optimized/Мороженое.webp"
+        alt="Мороженое"
+        loading="lazy"
+        className="pointer-events-none absolute right-12 top-[calc(58%)] h-[220px] w-auto max-w-[220px] -translate-y-1/2 transition-opacity duration-500 ease-out z-20"
+      />
     </section>
   );
 }
