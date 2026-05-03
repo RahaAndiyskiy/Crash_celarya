@@ -1,6 +1,6 @@
 export default function Contacts({ data }) {
   return (
-    <section id="contacts" className="relative px-4 pb-24 pt-10 bg-[#F5F3FF] overflow-hidden lg:m-20 lg:pb-16 lg:pt-12">
+    <section id="contacts" className="relative px-4 pb-24 pt-10 bg-[#F5F3FF] overflow-visible lg:m-20 lg:pb-16 lg:pt-12">
       <div className="mx-auto max-w-md text-center space-y-6 lg:max-w-6xl lg:text-left lg:space-y-8">
         <div className="lg:flex lg:items-start lg:justify-between lg:gap-12">
           <div className="lg:w-[35%] space-y-6 lg:space-y-4">
