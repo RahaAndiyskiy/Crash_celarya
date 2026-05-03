@@ -71,20 +71,15 @@ export default function Products({ items }) {
     <section id="products" className="relative space-y-6 mt-24 lg:mt-12">
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-12">
         <div className="lg:w-[30%] flex-shrink-0 lg:hidden">
-          <div className="flex flex-row flex-nowrap items-start justify-between gap-6 overflow-hidden">
+          <div className="flex flex-row flex-nowrap items-start justify-between gap-6 overflow-visible">
             <div className="min-w-[220px] max-w-[420px] space-y-5">
               <img
                 src="/optimized/Люблю школу.webp"
                 alt="Люблю школу"
                 loading="lazy"
-                className="relative left-[43px] top-[31px] lg:left-[0px] lg:top-[0px] lg:translate-x-0 lg:translate-y-0 h-24 w-auto object-contain sm:h-[7.5rem] -rotate-[10deg] transition-opacity duration-500 ease-out"
+                className="relative left-[5px] top-[31px] lg:left-[0px] lg:top-[0px] lg:translate-x-0 lg:translate-y-0 h-24 w-auto object-contain sm:h-[7.5rem] -rotate-[10deg] transition-opacity duration-500 ease-out"
               />
               <div className="text-left">
-                <h2 className="text-2xl font-nunito font-black tracking-tight text-primary leading-[0.95]">
-                  Все по
-                  <br />
-                  полочкам.
-                </h2>
               </div>
             </div>
             <div className="flex-shrink-0 relative -mt-2 -ml-10 lg:ml-0 lg:mt-0 max-[420px]:-ml-12 max-[360px]:-ml-14">
@@ -92,7 +87,7 @@ export default function Products({ items }) {
                 src="/optimized/Манул_Хит.webp"
                 alt=""
                 loading="lazy"
-                className="relative left-[-25px] lg:left-[0px] max-[420px]:left-[-40px] max-[360px]:left-[-26px] top-[15px] lg:top-[0px] lg:translate-x-0 lg:translate-y-0 h-[180px] w-auto object-contain drop-shadow-[0_4px_0_rgba(0,0,0,0.7)] transition-opacity duration-500 ease-out"
+                className="relative left-[-35px] top-[2px] lg:left-[0px] max-[420px]:left-[-40px] max-[360px]:left-[-26px] top-[15px] lg:top-[0px] lg:translate-x-0 lg:translate-y-0 h-[180px] w-auto object-contain drop-shadow-[0_4px_0_rgba(0,0,0,0.7)] transition-opacity duration-500 ease-out"
               />
             </div>
           </div>
