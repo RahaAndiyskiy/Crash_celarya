@@ -1,5 +1,6 @@
 import './globals.css';
 import CursorRepel from '../components/CursorRepel';
+import LenisProvider from '../components/Lenis';
 import ParticlesCanvas from '../components/ParticlesCanvas';
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <LenisProvider />
         <CursorRepel />
         <ParticlesCanvas />
         {children}
