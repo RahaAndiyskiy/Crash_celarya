@@ -1,4 +1,6 @@
 import './globals.css';
+import CursorRepel from '../components/CursorRepel';
+import ParticlesCanvas from '../components/ParticlesCanvas';
 
 export const metadata = {
   title: 'Крашцелярия — магазин канцелярии',
@@ -17,7 +19,11 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <CursorRepel />
+        <ParticlesCanvas />
+        {children}
+      </body>
     </html>
   );
 }

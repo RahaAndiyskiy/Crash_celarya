@@ -8,7 +8,7 @@ import { heroText, features, products, contacts } from '../content';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F5F3FF] text-slate-900">
+    <div className="relative z-10 min-h-screen bg-[#F5F3FF] text-slate-900">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-28">
         <Header />
       </div>
