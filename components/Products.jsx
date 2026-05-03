@@ -77,7 +77,7 @@ export default function Products({ items }) {
                 src="/optimized/Люблю школу.webp"
                 alt="Люблю школу"
                 loading="lazy"
-                className="relative left-[5px] top-[31px] lg:left-[0px] lg:top-[0px] lg:translate-x-0 lg:translate-y-0 h-24 w-auto object-contain sm:h-[7.5rem] -rotate-[10deg] transition-opacity duration-500 ease-out"
+                className="relative left-[0px] top-[31px] lg:left-[0px] lg:top-[0px] lg:translate-x-0 lg:translate-y-0 h-24 w-auto object-contain sm:h-[7.5rem] -rotate-[10deg] transition-opacity duration-500 ease-out"
               />
               <div className="text-left">
               </div>
@@ -87,7 +87,7 @@ export default function Products({ items }) {
                 src="/optimized/Манул_Хит.webp"
                 alt=""
                 loading="lazy"
-                className="relative left-[-35px] top-[2px] lg:left-[0px] max-[420px]:left-[-40px] max-[360px]:left-[-26px] top-[15px] lg:top-[0px] lg:translate-x-0 lg:translate-y-0 h-[180px] w-auto object-contain drop-shadow-[0_4px_0_rgba(0,0,0,0.7)] transition-opacity duration-500 ease-out"
+                className="relative left-[-50px] top-[2px] lg:left-[0px] max-[420px]:left-[-40px] max-[360px]:left-[-26px] top-[15px] lg:top-[0px] lg:translate-x-0 lg:translate-y-0 h-[180px] w-auto object-contain drop-shadow-[0_4px_0_rgba(0,0,0,0.7)] transition-opacity duration-500 ease-out"
               />
             </div>
           </div>
