@@ -43,7 +43,7 @@ export default function Hero({ data }) {
   }, []);
 
   return (
-    <section className="relative w-full pt-40 sm:pt-64 bg-[#F5F3FF] overflow-x-hidden overflow-y-visible">
+    <section className="relative min-h-[600px] lg:min-h-[720px] w-full pt-40 sm:pt-64 bg-[#F5F3FF] overflow-x-hidden overflow-y-visible">
       <div className="mx-auto max-w-7xl relative overflow-visible">
         <div ref={manulOuterRef} className="absolute left-1/2 top-0 z-0 -translate-x-1/2 -translate-y-[71%] pointer-events-none">
           <div className="relative">
@@ -64,7 +64,7 @@ export default function Hero({ data }) {
                 src="/optimized/hero-sticker.webp"
                 alt=""
                 loading="eager"
-                className="h-[162px] w-auto object-contain opacity-95 sm:h-[234px] -translate-x-12 -translate-y-[58%] sm:-translate-x-14 sm:-translate-y-[50%] lg:-translate-y-[58%] max-[430px]:-translate-x-[4.5rem] max-[430px]:-translate-y-[54%]"
+                className="h-[162px] w-auto object-contain opacity-95 sm:h-[234px] -translate-x-12 translate-y-[-40%] sm:-translate-x-14 sm:translate-y-[-35%] lg:-translate-x-28 lg:translate-y-[-35%]"
                 aria-hidden="true"
               />
             </div>
