@@ -97,59 +97,60 @@ export default function Products({ items }) {
             </div>
           </div>
         </div>
-        <div className="lg:w-[80%] lg:mx-auto">
-          <div className="space-y-3">
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => scrollCarousel(-1)}
-                className="hidden lg:flex absolute left-0 top-1/2 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-slate-200/70 transition hover:bg-slate-50"
-                aria-label="Прокрутить влево"
-              >
-                ‹
-              </button>
-              <button
-                type="button"
-                onClick={() => scrollCarousel(1)}
-                className="hidden lg:flex absolute right-0 top-1/2 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-slate-200/70 transition hover:bg-slate-50"
-                aria-label="Прокрутить вправо"
-              >
-                ›
-              </button>
-              <div className="relative">
-                <div
-                  ref={carouselRef}
-                  className="products-carousel flex w-full gap-4 overflow-x-auto overflow-y-visible px-[50px] lg:px-0 py-[50px] snap-x snap-mandatory scroll-smooth cursor-grab"
-                  onScroll={handleScroll}
-                  onPointerDown={handlePointerDown}
-                  onPointerMove={handlePointerMove}
-                  onPointerUp={handlePointerUp}
-                  onPointerLeave={handlePointerLeave}
-                >
-                  {items.map((item, i) => (
-                  <div
-                    key={i}
-                    className="product-card min-w-[220px] h-[326px] snap-start bg-white rounded-2xl p-3 shadow-none transform transition-transform duration-300 hover:scale-[1.02]"
-                  >
-              <div className="overflow-hidden rounded-2xl p-[4px] bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400">
-                <img
-                  src={item.image}
-                  loading="lazy"
-                  className="w-full h-[246px] object-cover rounded-xl transition-opacity duration-500 ease-out"
-                  alt={item.name}
-                />
-              </div>
+      </div>
 
-              <div className="mt-1 mb-1 text-center">
-                <p className="text-sm font-semibold text-gray-900 leading-tight">
-                  {item.name}
-                </p>
+      <div className="w-full">
+        <div className="relative w-full px-[50px] lg:px-[50px]">
+          <button
+            type="button"
+            onClick={() => scrollCarousel(-1)}
+            className="hidden lg:flex absolute left-0 top-1/2 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-slate-200/70 transition hover:bg-slate-50"
+            aria-label="Прокрутить влево"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollCarousel(1)}
+            className="hidden lg:flex absolute right-0 top-1/2 z-10 h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-lg ring-1 ring-slate-200/70 transition hover:bg-slate-50"
+            aria-label="Прокрутить вправо"
+          >
+            ›
+          </button>
+          <div
+            ref={carouselRef}
+            className="products-carousel flex w-full gap-4 p-[50px] lg:p-[100px] overflow-x-auto overflow-y-visible snap-x snap-mandatory scroll-smooth cursor-grab"
+            onScroll={handleScroll}
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerLeave={handlePointerLeave}
+          >
+            {items.map((item, i) => (
+              <div
+                key={i}
+                className="product-card min-w-[220px] h-[326px] snap-start bg-white rounded-2xl p-3 shadow-none transform transition-transform duration-300 hover:scale-[1.02]"
+              >
+                <div className="overflow-hidden rounded-2xl p-[4px] bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400">
+                  <img
+                    src={item.image}
+                    loading="lazy"
+                    className="w-full h-[246px] object-cover rounded-xl transition-opacity duration-500 ease-out"
+                    alt={item.name}
+                  />
+                </div>
+
+                <div className="mt-1 mb-1 text-center">
+                  <p className="text-sm font-semibold text-gray-900 leading-tight">
+                    {item.name}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="flex justify-center gap-2">
+        <div className="flex justify-center gap-2 mt-4">
           {Array.from({ length: indicatorCount }).map((_, i) => (
             <div
               key={i}
@@ -162,10 +163,6 @@ export default function Products({ items }) {
           ))}
         </div>
       </div>
-    </div>
-  </div>
-</div>
-</div>
 
       <style jsx>{`
         .products-carousel {
