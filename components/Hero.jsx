@@ -64,7 +64,7 @@ export default function Hero({ data }) {
                 src="/optimized/hero-sticker.webp"
                 alt=""
                 loading="eager"
-                className="h-[162px] w-auto object-contain opacity-95 sm:h-[234px] -translate-x-12 translate-y-[-40%] sm:-translate-x-14 sm:translate-y-[-35%] lg:-translate-x-28 lg:translate-y-[-25%]"
+                className="h-[162px] w-auto object-contain opacity-95 sm:h-[234px] -translate-x-20 translate-y-[-40%] sm:-translate-x-14 sm:translate-y-[-35%] lg:-translate-x-28 lg:translate-y-[-25%]"
                 aria-hidden="true"
               />
             </div>

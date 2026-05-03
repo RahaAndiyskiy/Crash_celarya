@@ -160,7 +160,7 @@ export default function Features({ items }) {
       {items?.length ? (
         <div className="relative">
           {/* Сетка карточек: телефон 1 колонка, планшет 2 колонки, ПК 3 колонки */}
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid gap-0 sm:gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {items.slice(0, 4).map((item) => (
               <article
                 key={item.id}
@@ -169,7 +169,7 @@ export default function Features({ items }) {
                   ${cardBackgrounds[item.id] ?? 'bg-slate-100'}
                   ${cardTransforms[item.id] ?? ''}
                   lg:aspect-[3/4] lg:min-h-0 lg:h-auto
-                  transform-gpu shadow-[10px_10px_0_rgba(0,0,0,0.78)]
+                  transform-gpu scale-[0.75] sm:scale-100 shadow-[10px_10px_0_rgba(0,0,0,0.78)]
                   transition duration-300 ease-out hover:-translate-y-1 hover:rotate-0`}
               >
                 <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
