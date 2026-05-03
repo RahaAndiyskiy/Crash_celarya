@@ -48,23 +48,23 @@ export default function Hero({ data }) {
         <div ref={manulOuterRef} className="absolute left-1/2 top-0 z-0 -translate-x-1/2 -translate-y-[71%] pointer-events-none">
           <div className="relative">
             <div className="absolute right-0 top-0 z-0 pointer-events-none opacity-90">
-  <img
-    ref={cloudImageRef}
-    src="/optimized/Облачко новое.webp"
-    alt=""
-    loading="eager"
-    className="h-[220px] w-auto opacity-0 sm:h-[280px]"
-    style={{ transform: 'translate(2rem, -5rem) rotate(25deg) scale(0.8)' }}
-    aria-hidden="true"
-  />
-</div>
+              <img
+                ref={cloudImageRef}
+                src="/optimized/Облачко новое.webp"
+                alt=""
+                loading="eager"
+                className="h-[220px] w-auto opacity-0 sm:h-[280px] lg:h-[340px]"
+                style={{ transform: 'translate(2rem, -5rem) rotate(25deg) scale(0.8)' }}
+                aria-hidden="true"
+              />
+            </div>
 
             <div className="absolute left-0 top-0 z-0 pointer-events-none opacity-90">
               <img
                 src="/optimized/hero-sticker.webp"
                 alt=""
                 loading="eager"
-                className="h-[162px] w-auto object-contain opacity-95 sm:h-[234px] -translate-x-12 -translate-y-[58%] sm:-translate-x-14 sm:-translate-y-[50%] max-[430px]:-translate-x-[4.5rem] max-[430px]:-translate-y-[54%]"
+                className="h-[162px] w-auto object-contain opacity-95 sm:h-[234px] -translate-x-12 -translate-y-[58%] sm:-translate-x-14 sm:-translate-y-[50%] lg:-translate-y-[58%] max-[430px]:-translate-x-[4.5rem] max-[430px]:-translate-y-[54%]"
                 aria-hidden="true"
               />
             </div>
@@ -78,13 +78,12 @@ export default function Hero({ data }) {
           </div>
         </div>
 
-        <div className="relative z-10 mx-auto w-full px-4 py-8 sm:px-6 sm:py-10 text-center overflow-hidden rounded-t-[32px] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)] bg-white">
+        <div className="relative z-10 mx-auto w-full px-4 py-8 sm:px-6 sm:py-10 text-center overflow-hidden rounded-t-[32px] shadow-[0_-18px_24px_-18px_rgba(15,23,42,0.16)] lg:shadow-[0_-18px_24px_-18px_rgba(168,85,247,0.38),20px_0_45px_-20px_rgba(56,189,248,0.28),-20px_0_45px_-20px_rgba(236,72,153,0.28),0_0_180px_0_rgba(168,85,247,0.18)] bg-white">
           <div className="relative mx-auto w-full max-w-3xl">
-            <h1 className="mb-2 text-4xl sm:text-2xl md:text-3xl font-black sm:leading-[1.04] font-nunito">
-              Канцтовары,
-              <br />
-              в которые ты{' '}
-              <span className="relative inline-block whitespace-normal text-[3rem] sm:text-[4.5rem] leading-none bg-gradient-to-r from-violet-500 via-fuchsia-500 to-yellow-400 bg-clip-text text-transparent">
+            <h1 className="mb-2 text-4xl lg:text-[2.5rem] sm:text-2xl md:text-3xl font-black sm:leading-[1.04] font-nunito">
+              <span className="block">Канцтовары,</span>
+              <span className="block lg:text-[3.8rem] xl:text-[4.25rem]">в которые ты</span>
+              <span className="relative block whitespace-normal text-[3rem] sm:text-[4.5rem] lg:text-[5.5rem] leading-none bg-gradient-to-r from-violet-500 via-fuchsia-500 to-yellow-400 bg-clip-text text-transparent">
                 влюбишься
                 <img
                   src="/optimized/Сердце лайм.webp"
@@ -97,38 +96,75 @@ export default function Hero({ data }) {
               </span>
             </h1>
 
-            <p className="mb-5 text-sm sm:text-base text-secondary leading-relaxed ">
-              Трендовая канцелярия, мерч блогеров и игрушки, которые хочется взять прямо сейчас!
-            </p>
+            <p className="mb-5 text-sm sm:text-base lg:text-lg text-secondary leading-relaxed max-w-[520px] mx-auto text-center">
+  Трендовая канцелярия, мерч блогеров и игрушки, которые хочется взять прямо сейчас!
+</p>
 
-            <div className="relative mb-5 w-full">
-              <div className="absolute left-0 bottom-10 z-0 pointer-events-none sm:-left-12 sm:bottom-16" style={{ opacity: 0.4 }}>
-                <img
-                  src="/optimized/клякса фиол.webp"
-                  alt=""
-                  loading="eager"
-                  className="w-[135px] h-auto opacity-100 sm:w-[248px]"
-                  aria-hidden="true"
-                />
-              </div>
-              <div className="relative flex flex-col gap-3 z-10">
-                <a href="#contacts" className="hero-button-primary w-full rounded-xl bg-[#A78BFA] px-4 py-2.5 text-base font-semibold text-white transition-colors hover:bg-[#9774f0]">
-                  Контакты
-                </a>
-                <a href="#products" className="catalog-button w-full rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-base font-semibold text-primary">
-                  <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-100 text-base">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
-                      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8Z" />
-                    </svg>
-                  </span>
-                  Каталог
-                </a>
-              </div>
-            </div>
-            <div className="mt-5 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
-              <span className="text-lg">🐾</span>
-              <span className="border-b border-purple-400">Одобрено Манулом</span>
-            </div>
+<div className="relative mb-5 w-full flex flex-col items-center">
+  
+  {/* КЛЯКСА */}
+  <div
+    className="
+      absolute z-0 pointer-events-none
+      left-1/2 -translate-x-1/2 bottom-12
+      sm:bottom-16
+      lg:left-[-60px] lg:translate-x-0 lg:bottom-10
+    "
+    style={{ opacity: 0.4 }}
+  >
+    <img
+      src="/optimized/клякса фиол.webp"
+      alt=""
+      loading="eager"
+      className="w-[135px] sm:w-[200px] lg:w-[260px] h-auto"
+      aria-hidden="true"
+    />
+  </div>
+
+  {/* КНОПКИ */}
+  <div className="relative z-10 flex flex-col gap-3 w-full max-w-[420px]">
+    
+    <a
+      href="#contacts"
+      className="
+        hero-button-primary
+        w-full rounded-xl
+        bg-[#A78BFA]
+        px-4 py-2.5
+        text-base lg:text-lg
+        font-semibold text-white
+        transition-colors hover:bg-[#9774f0]
+      "
+    >
+      Контакты
+    </a>
+
+    <a
+      href="#products"
+      className="
+        catalog-button
+        w-full rounded-xl
+        border border-gray-300 bg-white
+        px-4 py-2.5
+        text-base lg:text-lg
+        font-semibold text-primary
+        flex items-center justify-center
+      "
+    >
+      <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-slate-100">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+          <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8Z" />
+        </svg>
+      </span>
+      Каталог
+    </a>
+  </div>
+</div>
+
+<div className="mt-5 flex items-center justify-center gap-2 text-sm font-semibold text-slate-700">
+  <span className="text-lg">🐾</span>
+  <span className="border-b border-purple-400">Одобрено Манулом</span>
+</div>
           </div>
         </div>
       </div>

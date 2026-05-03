@@ -11,7 +11,7 @@ export default function ManulBlock() {
           src="/optimized/manul_upscaled-500.webp"
           alt="Манул"
           loading="eager"
-          className="mx-auto w-[200px] sm:w-[312px] max-w-none object-contain"
+          className="mx-auto w-[200px] sm:w-[312px] lg:w-[468px] lg:translate-y-7.5 max-w-none object-contain"
         />
       </picture>
     </div>

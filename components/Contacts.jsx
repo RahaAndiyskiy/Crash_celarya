@@ -67,32 +67,31 @@ export default function Contacts({ data }) {
                 z-10 "
               />
             </div>
-          </div>
-        </div>
 
-        {/* Соцсети */}
-        <div className="flex flex-wrap justify-center gap-3 pt-6 lg:pt-4">
-          <a href="/socials" aria-label="Instagram" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
-            <img src="/Icons SVG/icons8-instagram-100.svg" className="h-5 w-5" />
-          </a>
-          <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" aria-label="Telegram" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
-            <img src="/Icons SVG/icons8-telegram-app-100.svg" className="h-5 w-5" />
-          </a>
-          <a href="/socials" aria-label="VK" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
-            <img src="/Icons SVG/icons8-vk-com-100.svg" className="h-5 w-5" />
-          </a>
-          <a href="/socials" aria-label="TikTok" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
-            <img src="/Icons SVG/icons8-tiktok-100.svg" className="h-5 w-5" />
-          </a>
-          <a href="/socials" aria-label="YouTube" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
-            <img src="/Icons SVG/icons8-youtube-100.svg" className="h-5 w-5" />
-          </a>
-          <a href="/socials" aria-label="Pinterest" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
-            <img src="/Icons SVG/icons8-pinterest-100.svg" className="h-5 w-5" />
-          </a>
-          <a href="/socials" aria-label="Likee" className="h-8 w-8 flex items-center justify-center rounded-xl bg-white shadow">
-            <img src="/Icons SVG/icons8-likee-50.svg" className="h-5 w-5" />
-          </a>
+            <div className="flex flex-wrap justify-center gap-3 pt-6 lg:pt-4">
+              <a href="/socials" aria-label="Instagram" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+                <img src="/Icons SVG/icons8-instagram-100.svg" className="h-6 w-6" />
+              </a>
+              <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" aria-label="Telegram" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+                <img src="/Icons SVG/icons8-telegram-app-100.svg" className="h-6 w-6" />
+              </a>
+              <a href="/socials" aria-label="VK" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+                <img src="/Icons SVG/icons8-vk-com-100.svg" className="h-6 w-6" />
+              </a>
+              <a href="/socials" aria-label="TikTok" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+                <img src="/Icons SVG/icons8-tiktok-100.svg" className="h-6 w-6" />
+              </a>
+              <a href="/socials" aria-label="YouTube" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+                <img src="/Icons SVG/icons8-youtube-100.svg" className="h-6 w-6" />
+              </a>
+              <a href="/socials" aria-label="Pinterest" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+                <img src="/Icons SVG/icons8-pinterest-100.svg" className="h-6 w-6" />
+              </a>
+              <a href="/socials" aria-label="Likee" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+                <img src="/Icons SVG/icons8-likee-50.svg" className="h-6 w-6" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
