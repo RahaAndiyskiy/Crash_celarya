@@ -28,96 +28,110 @@ export default function ParticlesCanvas() {
   const canvasRef = useRef(null);
   const particlesRef = useRef([]);
   const animationRef = useRef(null);
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const context = canvas.getContext('2d');
-    if (!context) return;
+    canvas.style.opacity = '0';
+    canvas.style.transition = 'opacity 0.6s ease';
 
-    const dpr = window.devicePixelRatio || 1;
-    let width = window.innerWidth;
-    let height = window.innerHeight;
+    const initialize = () => {
+      const context = canvas.getContext('2d');
+      if (!context) return;
 
-    const resizeCanvas = () => {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = Math.floor(width * dpr);
-      canvas.height = Math.floor(height * dpr);
-      canvas.style.width = `${width}px`;
-      canvas.style.height = `${height}px`;
-      context.setTransform(dpr, 0, 0, dpr, 0, 0);
-    };
+      const dpr = window.devicePixelRatio || 1;
+      let width = window.innerWidth;
+      let height = window.innerHeight;
 
-    resizeCanvas();
-    particlesRef.current = createParticles(140, width, height);
+      const resizeCanvas = () => {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(height * dpr);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+        context.setTransform(dpr, 0, 0, dpr, 0, 0);
+      };
 
-    const handleResize = () => {
       resizeCanvas();
       particlesRef.current = createParticles(140, width, height);
-    };
 
-    window.addEventListener('resize', handleResize);
+      const handleResize = () => {
+        resizeCanvas();
+        particlesRef.current = createParticles(140, width, height);
+      };
 
-    const drawFrame = () => {
-      context.clearRect(0, 0, width, height);
-      context.globalCompositeOperation = 'source-over';
+      window.addEventListener('resize', handleResize);
 
-      const pointer = window.__particlesPointer;
+      const drawFrame = () => {
+        context.clearRect(0, 0, width, height);
+        context.globalCompositeOperation = 'source-over';
 
-      particlesRef.current.forEach((particle) => {
-        if (pointer && pointer.x !== null && pointer.y !== null) {
-          const dx = particle.x - pointer.x;
-          const dy = particle.y - pointer.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          const repelRadius = 160;
+        const pointer = window.__particlesPointer;
 
-          if (dist < repelRadius && dist > 0) {
-            const repelStrength = (1 - dist / repelRadius) * 0.22;
-            const nx = dx / dist;
-            const ny = dy / dist;
-            particle.vx += nx * repelStrength;
-            particle.vy += ny * repelStrength;
-            particle.x += nx * repelStrength * 2;
-            particle.y += ny * repelStrength * 2;
+        particlesRef.current.forEach((particle) => {
+          if (pointer && pointer.x !== null && pointer.y !== null) {
+            const dx = particle.x - pointer.x;
+            const dy = particle.y - pointer.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const repelRadius = 160;
+
+            if (dist < repelRadius && dist > 0) {
+              const repelStrength = (1 - dist / repelRadius) * 0.22;
+              const nx = dx / dist;
+              const ny = dy / dist;
+              particle.vx += nx * repelStrength;
+              particle.vy += ny * repelStrength;
+              particle.x += nx * repelStrength * 2;
+              particle.y += ny * repelStrength * 2;
+            }
           }
-        }
 
-        particle.x += Math.cos(particle.drift) * particle.speed + particle.vx;
-        particle.y += Math.sin(particle.drift) * particle.speed + particle.vy;
-        particle.phase += 0.012;
+          particle.x += Math.cos(particle.drift) * particle.speed + particle.vx;
+          particle.y += Math.sin(particle.drift) * particle.speed + particle.vy;
+          particle.phase += 0.012;
 
-        particle.vx *= 0.98;
-        particle.vy *= 0.98;
+          particle.vx *= 0.98;
+          particle.vy *= 0.98;
 
-        if (particle.x > width + 30) particle.x = -30;
-        if (particle.x < -30) particle.x = width + 30;
-        if (particle.y > height + 30) particle.y = -30;
-        if (particle.y < -30) particle.y = height + 30;
+          if (particle.x > width + 30) particle.x = -30;
+          if (particle.x < -30) particle.x = width + 30;
+          if (particle.y > height + 30) particle.y = -30;
+          if (particle.y < -30) particle.y = height + 30;
 
-        const alpha = Math.max(0, Math.min(1, particle.alpha + Math.sin(particle.phase) * 0.04));
-        const { r, g, b } = particle.color;
-        const color = `rgba(${r}, ${g}, ${b}, ${alpha})`;
+          const alpha = Math.max(0, Math.min(1, particle.alpha + Math.sin(particle.phase) * 0.04));
+          const { r, g, b } = particle.color;
+          const color = `rgba(${r}, ${g}, ${b}, ${alpha})`;
 
-        context.save();
-        context.fillStyle = color;
-        context.shadowColor = `rgba(${r}, ${g}, ${b}, ${alpha * 0.95})`;
-        context.shadowBlur = particle.size * 18;
-        context.beginPath();
-        context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        context.fill();
-        context.restore();
-      });
+          context.save();
+          context.fillStyle = color;
+          context.shadowColor = `rgba(${r}, ${g}, ${b}, ${alpha * 0.95})`;
+          context.shadowBlur = particle.size * 18;
+          context.beginPath();
+          context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+          context.fill();
+          context.restore();
+        });
 
-      animationRef.current = requestAnimationFrame(drawFrame);
+        animationRef.current = requestAnimationFrame(drawFrame);
+      };
+
+      drawFrame();
+      canvas.style.opacity = '1';
+
+      return () => {
+        if (animationRef.current) cancelAnimationFrame(animationRef.current);
+        window.removeEventListener('resize', handleResize);
+      };
     };
 
-    drawFrame();
+    timeoutRef.current = window.setTimeout(initialize, 650);
 
     return () => {
+      if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
-      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
