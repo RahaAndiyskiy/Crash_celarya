@@ -24,6 +24,7 @@ export function useSocialLinks() {
 
     async function load() {
       try {
+        setLoading(true);
         const response = await fetch(`/api/socials?cache-bust=${Date.now()}`, { cache: 'no-store' });
         const payload = await response.json();
 
@@ -54,6 +55,7 @@ export function useSocialLinks() {
 
         console.log('[useSocialLinks] final links', nextLinks);
         setLinks(nextLinks);
+        setError('');
       } catch (err) {
         if (!canceled) {
           setError(err?.message ?? 'Ошибка загрузки socials');
@@ -65,10 +67,20 @@ export function useSocialLinks() {
       }
     }
 
+    const handleVisibility = () => {
+      if (document.visibilityState === 'visible' && !canceled) {
+        load();
+      }
+    };
+
     load();
+    window.addEventListener('focus', handleVisibility);
+    document.addEventListener('visibilitychange', handleVisibility);
 
     return () => {
       canceled = true;
+      window.removeEventListener('focus', handleVisibility);
+      document.removeEventListener('visibilitychange', handleVisibility);
     };
   }, []);
 
