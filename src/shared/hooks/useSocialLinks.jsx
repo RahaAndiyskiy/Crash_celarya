@@ -1,23 +1,33 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-const defaultSocialLinks = {
-  instagram: '/socials',
-  telegram: 'https://t.me/crushschooltrends',
-  vk: '/socials',
-  tiktok: '/socials',
-  youtube: '/socials',
-  pinterest: '/socials',
-  likee: '/socials',
-};
+import { useEffect, useMemo, useState } from 'react';
 
 const normalize = (value) => String(value ?? '').trim().toLowerCase();
 
+const buildLinksFromRows = (rows) => {
+  if (!Array.isArray(rows)) {
+    return {};
+  }
+
+  return rows.reduce((acc, item) => {
+    const key = normalize(item?.name);
+    const url = String(item?.url ?? item?.href ?? item?.link ?? '').trim();
+
+    if (!key || !url) {
+      return acc;
+    }
+
+    acc[key] = url;
+    return acc;
+  }, {});
+};
+
 export function useSocialLinks() {
-  const [links, setLinks] = useState(defaultSocialLinks);
+  const [socialRows, setSocialRows] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+
+  const links = useMemo(() => buildLinksFromRows(socialRows), [socialRows]);
 
   useEffect(() => {
     let canceled = false;
@@ -28,8 +38,6 @@ export function useSocialLinks() {
         const response = await fetch(`/api/socials?cache-bust=${Date.now()}`, { cache: 'no-store' });
         const payload = await response.json();
 
-        console.log('[useSocialLinks] /api/socials payload', payload);
-
         if (!response.ok) {
           throw new Error(payload.error || 'Ошибка загрузки socials');
         }
@@ -38,27 +46,12 @@ export function useSocialLinks() {
           return;
         }
 
-        const nextLinks = { ...defaultSocialLinks };
-
-        if (!Array.isArray(payload.socials)) {
-          console.log('[useSocialLinks] socials is not array', payload.socials);
-        } else {
-          payload.socials.forEach((item) => {
-            const key = normalize(item.name);
-            const url = String(item.url ?? item.href ?? item.link ?? '').trim();
-            console.log('[useSocialLinks] map row', { name: item.name, key, url, item });
-            if (key && url) {
-              nextLinks[key] = url;
-            }
-          });
-        }
-
-        console.log('[useSocialLinks] final links', nextLinks);
-        setLinks(nextLinks);
+        setSocialRows(Array.isArray(payload.socials) ? payload.socials : []);
         setError('');
       } catch (err) {
         if (!canceled) {
           setError(err?.message ?? 'Ошибка загрузки socials');
+          setSocialRows([]);
         }
       } finally {
         if (!canceled) {
