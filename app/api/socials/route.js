@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { getSocials } from '../../../src/shared/lib/supabase';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const socials = await getSocials();
@@ -8,7 +10,9 @@ export async function GET() {
       { socials },
       {
         headers: {
-          'Cache-Control': 'no-store, max-age=0',
+          'Cache-Control': 'no-store, max-age=0, no-cache, must-revalidate',
+          Pragma: 'no-cache',
+          Expires: '0',
         },
       }
     );
