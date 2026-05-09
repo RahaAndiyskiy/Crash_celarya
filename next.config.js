@@ -9,6 +9,7 @@ const withPWA = require('next-pwa')({
       urlPattern: /^\/api\/socials$/,
       handler: 'NetworkOnly',
       method: 'GET',
+      options: {},
     },
   ],
   fallbacks: {
