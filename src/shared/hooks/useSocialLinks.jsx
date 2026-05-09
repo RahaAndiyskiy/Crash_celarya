@@ -24,7 +24,7 @@ export function useSocialLinks() {
 
     async function load() {
       try {
-        const response = await fetch('/api/socials');
+        const response = await fetch('/api/socials', { cache: 'no-store' });
         const payload = await response.json();
 
         console.log('[useSocialLinks] /api/socials payload', payload);
