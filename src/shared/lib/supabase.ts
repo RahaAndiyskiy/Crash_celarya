@@ -9,19 +9,20 @@ function loadEnvLocal() {
       return {};
     }
 
-    const raw = fs.readFileSync(envPath, 'utf8');
-    return raw
+    const raw = fs.readFileSync(envPath, 'utf8') as string;
+    const lines = raw
       .split(/\r?\n/)
       .map((line) => line.trim())
-      .filter((line) => line && !line.startsWith('#'))
-      .reduce((acc, line) => {
-        const index = line.indexOf('=');
-        if (index === -1) return acc;
-        const key = line.slice(0, index).trim();
-        const value = line.slice(index + 1).trim();
-        acc[key] = value;
-        return acc;
-      }, {});
+      .filter((line): line is string => !!line && !line.startsWith('#'));
+
+    return lines.reduce((acc: Record<string, string>, line: string) => {
+      const index = line.indexOf('=');
+      if (index === -1) return acc;
+      const key = line.slice(0, index).trim();
+      const value = line.slice(index + 1).trim();
+      acc[key] = value;
+      return acc;
+    }, {} as Record<string, string>);
   } catch {
     return {};
   }
