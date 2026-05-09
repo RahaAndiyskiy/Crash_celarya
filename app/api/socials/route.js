@@ -7,7 +7,11 @@ export async function GET() {
   try {
     const socials = await getSocials();
     return NextResponse.json(
-      { socials },
+      {
+        debugTime: new Date().toISOString(),
+        supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL,
+        socials,
+      },
       {
         headers: {
           'Cache-Control': 'no-store, max-age=0, no-cache, must-revalidate',

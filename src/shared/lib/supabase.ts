@@ -32,9 +32,8 @@ const localEnv = loadEnvLocal();
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || localEnv.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || localEnv.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
 export async function getSocials() {
+  const supabase = createClient(supabaseUrl, supabaseAnonKey);
   const { data, error } = await supabase
     .from('socials')
     .select('*')
