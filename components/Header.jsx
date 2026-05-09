@@ -1,9 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { useSocialLinks } from '../src/shared/hooks/useSocialLinks';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { links } = useSocialLinks();
+
+  const getTarget = (href) => (href?.startsWith('http') ? '_blank' : undefined);
+  const getRel = (href) => (href?.startsWith('http') ? 'noreferrer' : undefined);
 
   return (
     <>
@@ -31,49 +36,49 @@ export default function Header() {
 
         <div className="flex w-full items-center justify-end gap-2">
           <div className="hidden flex-wrap justify-end gap-2 md:flex">
-            <a href="/socials" aria-label="Instagram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <a href={links.instagram} target={getTarget(links.instagram)} rel={getRel(links.instagram)} aria-label="Instagram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
               <img src="/Icons SVG/icons8-instagram-100.svg" alt="Instagram" className="h-8 w-8" />
             </a>
-            <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" aria-label="Telegram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <a href={links.telegram} target={getTarget(links.telegram)} rel={getRel(links.telegram)} aria-label="Telegram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
               <img src="/Icons SVG/icons8-telegram-app-100.svg" alt="Telegram" className="h-8 w-8" />
             </a>
-            <a href="/socials" aria-label="VK" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <a href={links.vk} target={getTarget(links.vk)} rel={getRel(links.vk)} aria-label="VK" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
               <img src="/Icons SVG/icons8-vk-com-100.svg" alt="VK" className="h-8 w-8" />
             </a>
-            <a href="/socials" aria-label="TikTok" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <a href={links.tiktok} target={getTarget(links.tiktok)} rel={getRel(links.tiktok)} aria-label="TikTok" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
               <img src="/Icons SVG/icons8-tiktok-100.svg" alt="TikTok" className="h-8 w-8" />
             </a>
-            <a href="/socials" aria-label="YouTube" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <a href={links.youtube} target={getTarget(links.youtube)} rel={getRel(links.youtube)} aria-label="YouTube" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
               <img src="/Icons SVG/icons8-youtube-100.svg" alt="YouTube" className="h-8 w-8" />
             </a>
-            <a href="/socials" aria-label="Pinterest" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <a href={links.pinterest} target={getTarget(links.pinterest)} rel={getRel(links.pinterest)} aria-label="Pinterest" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
               <img src="/Icons SVG/icons8-pinterest-100.svg" alt="Pinterest" className="h-8 w-8" />
             </a>
-            <a href="/socials" aria-label="Likee" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+            <a href={links.likee} target={getTarget(links.likee)} rel={getRel(links.likee)} aria-label="Likee" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
               <img src="/Icons SVG/icons8-likee-50.svg" alt="Likee" className="h-8 w-8" />
             </a>
           </div>
         </div>
         <div className="flex flex-wrap justify-center gap-2 md:hidden">
-          <a href="/socials" aria-label="Instagram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+          <a href={links.instagram} target={getTarget(links.instagram)} rel={getRel(links.instagram)} aria-label="Instagram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
             <img src="/Icons SVG/icons8-instagram-100.svg" alt="Instagram" className="h-8 w-8" />
           </a>
-          <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" aria-label="Telegram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+          <a href={links.telegram} target={getTarget(links.telegram)} rel={getRel(links.telegram)} aria-label="Telegram" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
             <img src="/Icons SVG/icons8-telegram-app-100.svg" alt="Telegram" className="h-8 w-8" />
           </a>
-          <a href="/socials" aria-label="VK" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+          <a href={links.vk} target={getTarget(links.vk)} rel={getRel(links.vk)} aria-label="VK" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
             <img src="/Icons SVG/icons8-vk-com-100.svg" alt="VK" className="h-8 w-8" />
           </a>
-          <a href="/socials" aria-label="TikTok" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+          <a href={links.tiktok} target={getTarget(links.tiktok)} rel={getRel(links.tiktok)} aria-label="TikTok" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
             <img src="/Icons SVG/icons8-tiktok-100.svg" alt="TikTok" className="h-8 w-8" />
           </a>
-          <a href="/socials" aria-label="YouTube" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+          <a href={links.youtube} target={getTarget(links.youtube)} rel={getRel(links.youtube)} aria-label="YouTube" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
             <img src="/Icons SVG/icons8-youtube-100.svg" alt="YouTube" className="h-8 w-8" />
           </a>
-          <a href="/socials" aria-label="Pinterest" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+          <a href={links.pinterest} target={getTarget(links.pinterest)} rel={getRel(links.pinterest)} aria-label="Pinterest" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
             <img src="/Icons SVG/icons8-pinterest-100.svg" alt="Pinterest" className="h-8 w-8" />
           </a>
-          <a href="/socials" aria-label="Likee" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
+          <a href={links.likee} target={getTarget(links.likee)} rel={getRel(links.likee)} aria-label="Likee" className="inline-flex h-8 w-8 items-center justify-center rounded-2xl bg-white border border-slate-200 shadow-[0_0_20px_rgba(139,92,246,0.16)] transition hover:-translate-y-1 hover:shadow-[0_0_24px_rgba(139,92,246,0.24)]">
             <img src="/Icons SVG/icons8-likee-50.svg" alt="Likee" className="h-8 w-8" />
           </a>
         </div>

@@ -1,4 +1,12 @@
+'use client';
+
+import { useSocialLinks } from '../src/shared/hooks/useSocialLinks';
+
 export default function Contacts({ data }) {
+  const { links } = useSocialLinks();
+  const getTarget = (href) => (href?.startsWith('http') ? '_blank' : undefined);
+  const getRel = (href) => (href?.startsWith('http') ? 'noreferrer' : undefined);
+
   return (
     <section id="contacts" className="relative px-4 pb-24 pt-10 bg-[#F5F3FF] overflow-visible lg:m-20 lg:pb-16 lg:pt-12">
       <div className="mx-auto max-w-md text-center space-y-6 lg:max-w-6xl lg:text-left lg:space-y-8">
@@ -64,25 +72,25 @@ export default function Contacts({ data }) {
             </div>
 
             <div className="flex flex-wrap justify-center gap-3 pt-6 lg:pt-4">
-              <a href="/socials" aria-label="Instagram" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+              <a href={links.instagram} target={getTarget(links.instagram)} rel={getRel(links.instagram)} aria-label="Instagram" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
                 <img src="/Icons SVG/icons8-instagram-100.svg" className="h-6 w-6" />
               </a>
-              <a href="https://t.me/crushschooltrends" target="_blank" rel="noreferrer" aria-label="Telegram" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+              <a href={links.telegram} target={getTarget(links.telegram)} rel={getRel(links.telegram)} aria-label="Telegram" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
                 <img src="/Icons SVG/icons8-telegram-app-100.svg" className="h-6 w-6" />
               </a>
-              <a href="/socials" aria-label="VK" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+              <a href={links.vk} target={getTarget(links.vk)} rel={getRel(links.vk)} aria-label="VK" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
                 <img src="/Icons SVG/icons8-vk-com-100.svg" className="h-6 w-6" />
               </a>
-              <a href="/socials" aria-label="TikTok" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+              <a href={links.tiktok} target={getTarget(links.tiktok)} rel={getRel(links.tiktok)} aria-label="TikTok" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
                 <img src="/Icons SVG/icons8-tiktok-100.svg" className="h-6 w-6" />
               </a>
-              <a href="/socials" aria-label="YouTube" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+              <a href={links.youtube} target={getTarget(links.youtube)} rel={getRel(links.youtube)} aria-label="YouTube" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
                 <img src="/Icons SVG/icons8-youtube-100.svg" className="h-6 w-6" />
               </a>
-              <a href="/socials" aria-label="Pinterest" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+              <a href={links.pinterest} target={getTarget(links.pinterest)} rel={getRel(links.pinterest)} aria-label="Pinterest" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
                 <img src="/Icons SVG/icons8-pinterest-100.svg" className="h-6 w-6" />
               </a>
-              <a href="/socials" aria-label="Likee" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
+              <a href={links.likee} target={getTarget(links.likee)} rel={getRel(links.likee)} aria-label="Likee" className="h-12 w-12 flex items-center justify-center rounded-xl bg-white shadow">
                 <img src="/Icons SVG/icons8-likee-50.svg" className="h-6 w-6" />
               </a>
             </div>
