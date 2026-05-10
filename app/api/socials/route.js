@@ -4,6 +4,7 @@ import { getSocials } from '../../../src/shared/lib/supabase';
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
+  console.log('PRODUCTION BUILD TEST', Date.now());
   try {
     const socials = await getSocials();
     return NextResponse.json(
